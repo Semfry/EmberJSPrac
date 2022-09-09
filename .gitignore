@@ -23,5 +23,5 @@
 hs_err_pid*
 replay_pid*
 
-/node_modules
-/dist
+ember-quickstart/dist
+ember-quickstart/node_modules
