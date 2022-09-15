@@ -25,3 +25,6 @@ replay_pid*
 
 ember-quickstart/dist
 ember-quickstart/node_modules
+
+super-rentals/dist
+super-rentals/node_modules

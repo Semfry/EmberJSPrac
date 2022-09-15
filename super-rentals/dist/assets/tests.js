@@ -115,26 +115,30 @@ define("super-rentals/tests/integration/components/jumbo-test", ["@ember/templat
     });
   });
 });
-define("super-rentals/tests/integration/components/map-test", ["qunit", "super-rentals/tests/helpers", "@ember/test-helpers"], function (_qunit, _helpers, _testHelpers) {
+// import { module, test } from 'qunit';
+// import { setupRenderingTest } from 'super-rentals/tests/helpers';
+// import { render } from '@ember/test-helpers';
+// import { hbs } from 'ember-cli-htmlbars';
+// module('Integration | Component | map', function (hooks) {
+//   setupRenderingTest(hooks);
+//   test('it renders', async function (assert) {
+//     // Set any properties with this.set('myProperty', 'value');
+//     // Handle any actions with this.set('myAction', function(val) { ... });
+//     await render(hbs`<Map />`);
+//     assert.dom(this.element).hasText('');
+//     // Template block usage:
+//     await render(hbs`
+//       <Map>
+//         template block text
+//       </Map>
+//     `);
+//     assert.dom(this.element).hasText('template block text');
+//   });
+// });
+define("super-rentals/tests/integration/components/map-test", [], function () {
   "use strict";
 
-  0; //eaimeta@70e063a35619d71f0,"qunit",0,"super-rentals/tests/helpers",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
-  // module('Integration | Component | map', function (hooks) {
-  //   setupRenderingTest(hooks);
-  //   test('it renders', async function (assert) {
-  //     // Set any properties with this.set('myProperty', 'value');
-  //     // Handle any actions with this.set('myAction', function(val) { ... });
-  //     await render(hbs`<Map />`);
-  //     assert.dom(this.element).hasText('');
-  //     // Template block usage:
-  //     await render(hbs`
-  //       <Map>
-  //         template block text
-  //       </Map>
-  //     `);
-  //     assert.dom(this.element).hasText('template block text');
-  //   });
-  // });
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
 });
 define("super-rentals/tests/integration/components/rental-test", ["@ember/template-factory", "qunit", "super-rentals/tests/helpers", "@ember/test-helpers"], function (_templateFactory, _qunit, _helpers, _testHelpers) {
   "use strict";
