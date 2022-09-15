@@ -57,6 +57,214 @@
   });
   0; //eaimeta@70e063a35619d71f0,"@glimmer/component/-private/ember-component-manager"eaimeta@70e063a35619d71f
 });
+;define("super-rentals/components/jumbo", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component/template-only"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    <div class="jumbo">
+    <div class="right tomster"></div>
+    {{yield}}
+  </div>
+  */
+  {
+    "id": "17U3sk/C",
+    "block": "[[[10,0],[14,0,\"jumbo\"],[12],[1,\"\\n  \"],[10,0],[14,0,\"right tomster\"],[12],[13],[1,\"\\n  \"],[18,1,null],[1,\"\\n\"],[13]],[\"&default\"],false,[\"yield\"]]",
+    "moduleName": "super-rentals/components/jumbo.hbs",
+    "isStrictMode": false
+  });
+
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, (0, _templateOnly.default)());
+
+  _exports.default = _default;
+});
+;define("super-rentals/components/map", ["exports", "@ember/component", "@ember/template-factory", "@glimmer/component", "super-rentals/config/environment"], function (_exports, _component, _templateFactory, _component2, _environment) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@glimmer/component",0,"super-rentals/config/environment"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    <div class="map">
+    <img
+      alt="Map image at coordinates {{@lat}},{{@lng}}"
+      ...attributes
+      src="https://maps.geoapify.com/v1/staticmap?style=osm-carto&width=600&height=400&center=lonlat:-122.304378,47.526022&zoom=14&apiKey=b8c890bea2854f599e6f45d128adcb61"
+      width={{@width}} height={{@height}}
+    >
+  </div>
+  */
+  {
+    "id": "Qf2J7h8t",
+    "block": "[[[10,0],[14,0,\"map\"],[12],[1,\"\\n  \"],[11,\"img\"],[16,\"alt\",[29,[\"Map image at coordinates \",[30,1],\",\",[30,2]]]],[17,3],[24,\"src\",\"https://maps.geoapify.com/v1/staticmap?style=osm-carto&width=600&height=400&center=lonlat:-122.304378,47.526022&zoom=14&apiKey=b8c890bea2854f599e6f45d128adcb61\"],[16,\"width\",[30,4]],[16,\"height\",[30,5]],[12],[13],[1,\"\\n\"],[13]],[\"@lat\",\"@lng\",\"&attrs\",\"@width\",\"@height\"],false,[]]",
+    "moduleName": "super-rentals/components/map.hbs",
+    "isStrictMode": false
+  });
+
+  class MapComponent extends _component2.default {
+    get token() {
+      return encodeURIComponent(_environment.default.GEOAPIFY_ACCESS_TOKEN);
+    }
+
+  }
+
+  _exports.default = MapComponent;
+  (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, MapComponent);
+});
+;define("super-rentals/components/nav-bar", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component/template-only"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    <nav class="menu">
+    <LinkTo @route="index" class="menu-index">
+      <h1>SuperRentals</h1>
+    </LinkTo>
+    <div class="links">
+      <LinkTo @route="about" class="menu-about">
+        About
+      </LinkTo>
+      <LinkTo @route="contact" class="menu-contact">
+        Contact
+      </LinkTo>
+    </div>
+  </nav>
+  */
+  {
+    "id": "dyxwRZsn",
+    "block": "[[[10,\"nav\"],[14,0,\"menu\"],[12],[1,\"\\n  \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n    \"],[10,\"h1\"],[12],[1,\"SuperRentals\"],[13],[1,\"\\n  \"]],[]]]]],[1,\"\\n  \"],[10,0],[14,0,\"links\"],[12],[1,\"\\n    \"],[8,[39,0],[[24,0,\"menu-about\"]],[[\"@route\"],[\"about\"]],[[\"default\"],[[[[1,\"\\n      About\\n    \"]],[]]]]],[1,\"\\n    \"],[8,[39,0],[[24,0,\"menu-contact\"]],[[\"@route\"],[\"contact\"]],[[\"default\"],[[[[1,\"\\n      Contact\\n    \"]],[]]]]],[1,\"\\n  \"],[13],[1,\"\\n\"],[13]],[],false,[\"link-to\"]]",
+    "moduleName": "super-rentals/components/nav-bar.hbs",
+    "isStrictMode": false
+  });
+
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, (0, _templateOnly.default)());
+
+  _exports.default = _default;
+});
+;define("super-rentals/components/rental", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component/template-only"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    <article class="rental">
+      <Rental::Image
+      src={{@rental.image}}
+      alt="A picture of {{@rental.title}}"
+      />
+    <div class="details">
+      <h3>{{@rental.title}}</h3>
+      <div class="detail owner">
+        <span>Owner:</span> {{@rental.owner}}
+      </div>
+      <div class="detail type">
+        <span>Type:</span> {{@rental.type}}
+      </div>
+      <div class="detail location">
+        <span>Location:</span> {{@rental.city}}
+      </div>
+      <div class="detail bedrooms">
+        <span>Number of bedrooms:</span> {{@rental.bedrooms}}
+      </div>
+    </div>
+    <Map
+      @lat={{@rental.location.lat}}
+      @lng={{@rental.location.lng}}
+      @zoom="9"
+      @width="150"
+      @height="150"
+      alt="A map of {{@rental.title}}"
+    />
+  </article>
+  */
+  {
+    "id": "bLLt3bHR",
+    "block": "[[[10,\"article\"],[14,0,\"rental\"],[12],[1,\"\\n    \"],[8,[39,0],[[16,\"src\",[30,1,[\"image\"]]],[16,\"alt\",[29,[\"A picture of \",[30,1,[\"title\"]]]]]],null,null],[1,\"\\n  \"],[10,0],[14,0,\"details\"],[12],[1,\"\\n    \"],[10,\"h3\"],[12],[1,[30,1,[\"title\"]]],[13],[1,\"\\n    \"],[10,0],[14,0,\"detail owner\"],[12],[1,\"\\n      \"],[10,1],[12],[1,\"Owner:\"],[13],[1,\" \"],[1,[30,1,[\"owner\"]]],[1,\"\\n    \"],[13],[1,\"\\n    \"],[10,0],[14,0,\"detail type\"],[12],[1,\"\\n      \"],[10,1],[12],[1,\"Type:\"],[13],[1,\" \"],[1,[30,1,[\"type\"]]],[1,\"\\n    \"],[13],[1,\"\\n    \"],[10,0],[14,0,\"detail location\"],[12],[1,\"\\n      \"],[10,1],[12],[1,\"Location:\"],[13],[1,\" \"],[1,[30,1,[\"city\"]]],[1,\"\\n    \"],[13],[1,\"\\n    \"],[10,0],[14,0,\"detail bedrooms\"],[12],[1,\"\\n      \"],[10,1],[12],[1,\"Number of bedrooms:\"],[13],[1,\" \"],[1,[30,1,[\"bedrooms\"]]],[1,\"\\n    \"],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[8,[39,1],[[16,\"alt\",[29,[\"A map of \",[30,1,[\"title\"]]]]]],[[\"@lat\",\"@lng\",\"@zoom\",\"@width\",\"@height\"],[[30,1,[\"location\",\"lat\"]],[30,1,[\"location\",\"lng\"]],\"9\",\"150\",\"150\"]],null],[1,\"\\n\"],[13]],[\"@rental\"],false,[\"rental/image\",\"map\"]]",
+    "moduleName": "super-rentals/components/rental.hbs",
+    "isStrictMode": false
+  });
+
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, (0, _templateOnly.default)());
+
+  _exports.default = _default;
+});
+;define("super-rentals/components/rental/image", ["exports", "@ember/component", "@ember/template-factory", "@glimmer/component", "@glimmer/tracking", "@ember/object"], function (_exports, _component, _templateFactory, _component2, _tracking, _object) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _class, _descriptor;
+
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@glimmer/component",0,"@glimmer/tracking",0,"@ember/object"eaimeta@70e063a35619d71f
+
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    <button type="button" class="image {{if this.isLarge "large"}}" {{on "click" this.toggleSize}}>
+    <img ...attributes>
+    <small>View {{if this.isLarge "Smaller" "Larger"}}</small>
+  </button>
+  */
+  {
+    "id": "QZCt8ZLX",
+    "block": "[[[11,\"button\"],[16,0,[29,[\"image \",[52,[30,0,[\"isLarge\"]],\"large\"]]]],[24,4,\"button\"],[4,[38,1],[\"click\",[30,0,[\"toggleSize\"]]],null],[12],[1,\"\\n  \"],[11,\"img\"],[17,1],[12],[13],[1,\"\\n  \"],[10,\"small\"],[12],[1,\"View \"],[1,[52,[30,0,[\"isLarge\"]],\"Smaller\",\"Larger\"]],[13],[1,\"\\n\"],[13]],[\"&attrs\"],false,[\"if\",\"on\"]]",
+    "moduleName": "super-rentals/components/rental/image.hbs",
+    "isStrictMode": false
+  });
+
+  let RentalImageComponent = (_class = class RentalImageComponent extends _component2.default {
+    constructor() {
+      super(...arguments);
+
+      _initializerDefineProperty(this, "isLarge", _descriptor, this);
+    }
+
+    toggleSize() {
+      this.isLarge = !this.isLarge;
+    }
+
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "isLarge", [_tracking.tracked], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: function () {
+      return false;
+    }
+  }), _applyDecoratedDescriptor(_class.prototype, "toggleSize", [_object.action], Object.getOwnPropertyDescriptor(_class.prototype, "toggleSize"), _class.prototype)), _class);
+  _exports.default = RentalImageComponent;
+  (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, RentalImageComponent);
+});
 ;define("super-rentals/components/welcome-page", ["exports", "ember-welcome-page/components/welcome-page.js"], function (_exports, _welcomePage) {
   "use strict";
 
@@ -298,6 +506,46 @@
     });
   });
 });
+;define("super-rentals/routes/index", ["exports", "@ember/routing/route"], function (_exports, _route) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/routing/route"eaimeta@70e063a35619d71f
+
+  const COMMUNITY_CATEGORIES = ['Condo', 'Townhouse', 'Apartment'];
+
+  class IndexRoute extends _route.default {
+    async model() {
+      let response = await fetch('/api/rentals.json');
+      let {
+        data
+      } = await response.json();
+      return data.map(model => {
+        let {
+          attributes
+        } = model;
+        let type;
+
+        if (COMMUNITY_CATEGORIES.includes(attributes.category)) {
+          type = 'Community';
+        } else {
+          type = 'Standalone';
+        }
+
+        return {
+          type,
+          ...attributes
+        };
+      });
+    }
+
+  }
+
+  _exports.default = IndexRoute;
+});
 ;define("super-rentals/serializers/-default", ["exports", "@ember-data/serializer/json"], function (_exports, _json) {
   "use strict";
 
@@ -407,8 +655,7 @@
 
   var _default = (0, _templateFactory.createTemplateFactory)(
   /*
-    <div class="jumbo">
-      <div class="right tomster"></div>
+    <Jumbo>
       <h2>About Super Rentals</h2>
       <p>
         The Super Rentals website is a delightful project created to explore Ember.
@@ -416,12 +663,39 @@
         AND building Ember applications.
       </p>
       <LinkTo @route="contact" class="button">Contact Us</LinkTo>
-    </div>
+  </Jumbo>
   */
   {
-    "id": "5o9AX123",
-    "block": "[[[10,0],[14,0,\"jumbo\"],[12],[1,\"\\n    \"],[10,0],[14,0,\"right tomster\"],[12],[13],[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"About Super Rentals\"],[13],[1,\"\\n    \"],[10,2],[12],[1,\"\\n      The Super Rentals website is a delightful project created to explore Ember.\\n      By building a property rental site, we can simultaneously imagine traveling\\n      AND building Ember applications.\\n    \"],[13],[1,\"\\n    \"],[8,[39,0],[[24,0,\"button\"]],[[\"@route\"],[\"contact\"]],[[\"default\"],[[[[1,\"Contact Us\"]],[]]]]],[1,\"\\n  \"],[13]],[],false,[\"link-to\"]]",
+    "id": "kGjX4lOW",
+    "block": "[[[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"About Super Rentals\"],[13],[1,\"\\n    \"],[10,2],[12],[1,\"\\n      The Super Rentals website is a delightful project created to explore Ember.\\n      By building a property rental site, we can simultaneously imagine traveling\\n      AND building Ember applications.\\n    \"],[13],[1,\"\\n    \"],[8,[39,1],[[24,0,\"button\"]],[[\"@route\"],[\"contact\"]],[[\"default\"],[[[[1,\"Contact Us\"]],[]]]]],[1,\"\\n\"]],[]]]]]],[],false,[\"jumbo\",\"link-to\"]]",
     "moduleName": "super-rentals/templates/about.hbs",
+    "isStrictMode": false
+  });
+
+  _exports.default = _default;
+});
+;define("super-rentals/templates/application", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
+
+  var _default = (0, _templateFactory.createTemplateFactory)(
+  /*
+    <div class="container">
+    <NavBar />
+    <div class="body">
+      {{outlet}}
+    </div>
+  </div>
+  */
+  {
+    "id": "1M/RG5OV",
+    "block": "[[[10,0],[14,0,\"container\"],[12],[1,\"\\n  \"],[8,[39,0],null,null,null],[1,\"\\n  \"],[10,0],[14,0,\"body\"],[12],[1,\"\\n    \"],[46,[28,[37,2],null,null],null,null,null],[1,\"\\n  \"],[13],[1,\"\\n\"],[13]],[],false,[\"nav-bar\",\"component\",\"-outlet\"]]",
+    "moduleName": "super-rentals/templates/application.hbs",
     "isStrictMode": false
   });
 
@@ -438,8 +712,7 @@
 
   var _default = (0, _templateFactory.createTemplateFactory)(
   /*
-    <div class="jumbo">
-      <div class="right tomster"></div>
+    <Jumbo>
       <h2>Contact Us</h2>
       <p>
         Super Rentals Representatives would love to help you<br>
@@ -455,11 +728,11 @@
         <a href="mailto:superrentalsrep@emberjs.com">superrentalsrep@emberjs.com</a>
       </address>
       <LinkTo @route="about" class="button">About</LinkTo>
-    </div>
+  </Jumbo>
   */
   {
-    "id": "QyyImcMc",
-    "block": "[[[10,0],[14,0,\"jumbo\"],[12],[1,\"\\n    \"],[10,0],[14,0,\"right tomster\"],[12],[13],[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"Contact Us\"],[13],[1,\"\\n    \"],[10,2],[12],[1,\"\\n      Super Rentals Representatives would love to help you\"],[10,\"br\"],[12],[13],[1,\"\\n      choose a destination or answer any questions you may have.\\n    \"],[13],[1,\"\\n    \"],[10,\"address\"],[12],[1,\"\\n      Super Rentals HQ\\n      \"],[10,2],[12],[1,\"\\n        1212 Test Address Avenue\"],[10,\"br\"],[12],[13],[1,\"\\n        Testington, OR 97233\\n      \"],[13],[1,\"\\n      \"],[10,3],[14,6,\"tel:503.555.1212\"],[12],[1,\"+1 (503) 555-1212\"],[13],[10,\"br\"],[12],[13],[1,\"\\n      \"],[10,3],[14,6,\"mailto:superrentalsrep@emberjs.com\"],[12],[1,\"superrentalsrep@emberjs.com\"],[13],[1,\"\\n    \"],[13],[1,\"\\n    \"],[8,[39,0],[[24,0,\"button\"]],[[\"@route\"],[\"about\"]],[[\"default\"],[[[[1,\"About\"]],[]]]]],[1,\"\\n  \"],[13]],[],false,[\"link-to\"]]",
+    "id": "iO5xEOgM",
+    "block": "[[[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"Contact Us\"],[13],[1,\"\\n    \"],[10,2],[12],[1,\"\\n      Super Rentals Representatives would love to help you\"],[10,\"br\"],[12],[13],[1,\"\\n      choose a destination or answer any questions you may have.\\n    \"],[13],[1,\"\\n    \"],[10,\"address\"],[12],[1,\"\\n      Super Rentals HQ\\n      \"],[10,2],[12],[1,\"\\n        1212 Test Address Avenue\"],[10,\"br\"],[12],[13],[1,\"\\n        Testington, OR 97233\\n      \"],[13],[1,\"\\n      \"],[10,3],[14,6,\"tel:503.555.1212\"],[12],[1,\"+1 (503) 555-1212\"],[13],[10,\"br\"],[12],[13],[1,\"\\n      \"],[10,3],[14,6,\"mailto:superrentalsrep@emberjs.com\"],[12],[1,\"superrentalsrep@emberjs.com\"],[13],[1,\"\\n    \"],[13],[1,\"\\n    \"],[8,[39,1],[[24,0,\"button\"]],[[\"@route\"],[\"about\"]],[[\"default\"],[[[[1,\"About\"]],[]]]]],[1,\"\\n\"]],[]]]]]],[],false,[\"jumbo\",\"link-to\"]]",
     "moduleName": "super-rentals/templates/contact.hbs",
     "isStrictMode": false
   });
@@ -477,16 +750,23 @@
 
   var _default = (0, _templateFactory.createTemplateFactory)(
   /*
-    <div class="jumbo">
-      <div class="right tomster"></div>
+    <Jumbo>
       <h2>Welcome to Super Rentals!</h2>
       <p>We hope you find exactly what you're looking for in a place to stay.</p>
       <LinkTo @route="about" class="button">About Us</LinkTo>
+  </Jumbo>
+  
+  <div class="rentals">
+    <ul class="results">
+      {{#each @model as |rental|}}
+        <li><Rental @rental={{rental}} /></li>
+      {{/each}}
+    </ul>
   </div>
   */
   {
-    "id": "LkSJyyF4",
-    "block": "[[[10,0],[14,0,\"jumbo\"],[12],[1,\"\\n    \"],[10,0],[14,0,\"right tomster\"],[12],[13],[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"Welcome to Super Rentals!\"],[13],[1,\"\\n    \"],[10,2],[12],[1,\"We hope you find exactly what you're looking for in a place to stay.\"],[13],[1,\"\\n    \"],[8,[39,0],[[24,0,\"button\"]],[[\"@route\"],[\"about\"]],[[\"default\"],[[[[1,\"About Us\"]],[]]]]],[1,\"\\n\"],[13]],[],false,[\"link-to\"]]",
+    "id": "GrdXc4W9",
+    "block": "[[[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"Welcome to Super Rentals!\"],[13],[1,\"\\n    \"],[10,2],[12],[1,\"We hope you find exactly what you're looking for in a place to stay.\"],[13],[1,\"\\n    \"],[8,[39,1],[[24,0,\"button\"]],[[\"@route\"],[\"about\"]],[[\"default\"],[[[[1,\"About Us\"]],[]]]]],[1,\"\\n\"]],[]]]]],[1,\"\\n\\n\"],[10,0],[14,0,\"rentals\"],[12],[1,\"\\n  \"],[10,\"ul\"],[14,0,\"results\"],[12],[1,\"\\n\"],[42,[28,[37,3],[[28,[37,3],[[30,1]],null]],null],null,[[[1,\"      \"],[10,\"li\"],[12],[8,[39,4],null,[[\"@rental\"],[[30,2]]],null],[13],[1,\"\\n\"]],[2]],null],[1,\"  \"],[13],[1,\"\\n\"],[13]],[\"@model\",\"rental\"],false,[\"jumbo\",\"link-to\",\"each\",\"-track-array\",\"rental\"]]",
     "moduleName": "super-rentals/templates/index.hbs",
     "isStrictMode": false
   });
@@ -572,7 +852,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("super-rentals/app")["default"].create({"name":"super-rentals","version":"0.0.0+bc19befe"});
+            require("super-rentals/app")["default"].create({"name":"super-rentals","version":"0.0.0+c42bd0f6"});
           }
         
 //# sourceMappingURL=super-rentals.map
