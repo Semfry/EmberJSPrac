@@ -28,3 +28,5 @@ ember-quickstart/node_modules
 
 super-rentals/dist
 super-rentals/node_modules
+
+db.sqlite3

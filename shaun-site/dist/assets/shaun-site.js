@@ -16,6 +16,32 @@
   });
   0; //eaimeta@70e063a35619d71f0,"@ember-data/adapter/json-api"eaimeta@70e063a35619d71f
 });
+;define("shaun-site/adapters/application", ["exports", "@ember-data/adapter/json-api"], function (_exports, _jsonApi) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/adapter/json-api"eaimeta@70e063a35619d71f
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  class ApplicationAdapter extends _jsonApi.default {
+    constructor() {
+      super(...arguments);
+
+      _defineProperty(this, "namespace", 'api');
+    }
+
+    buildURL() {
+      return `${super.buildURL(...arguments)}.json`;
+    }
+
+  }
+
+  _exports.default = ApplicationAdapter;
+});
 ;define("shaun-site/app", ["exports", "@ember/application", "ember-resolver", "ember-load-initializers", "shaun-site/config/environment"], function (_exports, _application, _emberResolver, _emberLoadInitializers, _environment) {
   "use strict";
 
@@ -57,6 +83,38 @@
   });
   0; //eaimeta@70e063a35619d71f0,"@glimmer/component/-private/ember-component-manager"eaimeta@70e063a35619d71f
 });
+;define("shaun-site/components/favgame", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component/template-only"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    {{#each @model.favgames as |favgame|}}
+  <div id="favgames">
+      <br>
+      <li>Game Name: {{favgame.gamename}}</li>
+      <br>
+      <li>Release year: {{favgame.startyear}}</li>
+  </div>
+        
+  {{/each}}
+  */
+  {
+    "id": "kpZERXdp",
+    "block": "[[[42,[28,[37,1],[[28,[37,1],[[30,1,[\"favgames\"]]],null]],null],null,[[[10,0],[14,1,\"favgames\"],[12],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"li\"],[12],[1,\"Game Name: \"],[1,[30,2,[\"gamename\"]]],[13],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"li\"],[12],[1,\"Release year: \"],[1,[30,2,[\"startyear\"]]],[13],[1,\"\\n\"],[13],[1,\"\\n      \\n\"]],[2]],null]],[\"@model\",\"favgame\"],false,[\"each\",\"-track-array\"]]",
+    "moduleName": "shaun-site/components/favgame.hbs",
+    "isStrictMode": false
+  });
+
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, (0, _templateOnly.default)());
+
+  _exports.default = _default;
+});
 ;define("shaun-site/components/header", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
   "use strict";
 
@@ -85,6 +143,73 @@
 
   _exports.default = _default;
 });
+;define("shaun-site/components/imagehandler", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component/template-only"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    <div class="image">
+    <img ...attributes>
+  </div>
+  */
+  {
+    "id": "F9uxMHw5",
+    "block": "[[[10,0],[14,0,\"image\"],[12],[1,\"\\n  \"],[11,\"img\"],[17,1],[12],[13],[1,\"\\n\"],[13]],[\"&attrs\"],false,[]]",
+    "moduleName": "shaun-site/components/imagehandler.hbs",
+    "isStrictMode": false
+  });
+
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, (0, _templateOnly.default)());
+
+  _exports.default = _default;
+});
+;define("shaun-site/components/modlist", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component/template-only"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    {{#each @model.modlists as |modlist|}}
+      <div id="modlists">
+          <br>
+          <Imagehandler
+          src={{@modlist.imagelink}}
+          alt="A picture of {{@modlist.modname}}"
+          />
+          <br>
+          <li>Mod Name: {{modlist.modname}}</li>
+          <br>
+          <li>Release Year: {{modlist.releaseyear}}</li>
+          <br>
+          <li>Game: {{modlist.game}}</li>
+          <br>
+          <a href="{{modlist.link}}">Download {{modlist.modname}}</a>
+      </div>
+        
+  {{/each}}
+  */
+  {
+    "id": "fTTLqrwA",
+    "block": "[[[42,[28,[37,1],[[28,[37,1],[[30,1,[\"modlists\"]]],null]],null],null,[[[1,\"    \"],[10,0],[14,1,\"modlists\"],[12],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[8,[39,2],[[16,\"src\",[30,3,[\"imagelink\"]]],[16,\"alt\",[29,[\"A picture of \",[30,3,[\"modname\"]]]]]],null,null],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"li\"],[12],[1,\"Mod Name: \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"li\"],[12],[1,\"Release Year: \"],[1,[30,2,[\"releaseyear\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"li\"],[12],[1,\"Game: \"],[1,[30,2,[\"game\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,3],[15,6,[29,[[30,2,[\"link\"]]]]],[12],[1,\"Download \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n    \"],[13],[1,\"\\n      \\n\"]],[2]],null]],[\"@model\",\"modlist\",\"@modlist\"],false,[\"each\",\"-track-array\",\"imagehandler\"]]",
+    "moduleName": "shaun-site/components/modlist.hbs",
+    "isStrictMode": false
+  });
+
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, (0, _templateOnly.default)());
+
+  _exports.default = _default;
+});
 ;define("shaun-site/components/navbar", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
   "use strict";
 
@@ -101,44 +226,19 @@
       <h1>Main Page</h1>
     </LinkTo>
     <div class="links">
-      <LinkTo @route="favgames" class="menu-favgames">
+      <LinkTo @route="favgame" class="menu-favgames">
         Favourite Games
       </LinkTo>
-      <LinkTo @route="mymods" class="menu-mymods">
+      <LinkTo @route="modlist" class="menu-modlists">
         My Mods
       </LinkTo>
     </div>
   </nav>
   */
   {
-    "id": "Q19fpMc6",
-    "block": "[[[10,\"nav\"],[14,0,\"menu\"],[12],[1,\"\\n  \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n    \"],[10,\"h1\"],[12],[1,\"Main Page\"],[13],[1,\"\\n  \"]],[]]]]],[1,\"\\n  \"],[10,0],[14,0,\"links\"],[12],[1,\"\\n    \"],[8,[39,0],[[24,0,\"menu-favgames\"]],[[\"@route\"],[\"favgames\"]],[[\"default\"],[[[[1,\"\\n      Favourite Games\\n    \"]],[]]]]],[1,\"\\n    \"],[8,[39,0],[[24,0,\"menu-mymods\"]],[[\"@route\"],[\"mymods\"]],[[\"default\"],[[[[1,\"\\n      My Mods\\n    \"]],[]]]]],[1,\"\\n  \"],[13],[1,\"\\n\"],[13]],[],false,[\"link-to\"]]",
+    "id": "8i+X6HO/",
+    "block": "[[[10,\"nav\"],[14,0,\"menu\"],[12],[1,\"\\n  \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n    \"],[10,\"h1\"],[12],[1,\"Main Page\"],[13],[1,\"\\n  \"]],[]]]]],[1,\"\\n  \"],[10,0],[14,0,\"links\"],[12],[1,\"\\n    \"],[8,[39,0],[[24,0,\"menu-favgames\"]],[[\"@route\"],[\"favgame\"]],[[\"default\"],[[[[1,\"\\n      Favourite Games\\n    \"]],[]]]]],[1,\"\\n    \"],[8,[39,0],[[24,0,\"menu-modlists\"]],[[\"@route\"],[\"modlist\"]],[[\"default\"],[[[[1,\"\\n      My Mods\\n    \"]],[]]]]],[1,\"\\n  \"],[13],[1,\"\\n\"],[13]],[],false,[\"link-to\"]]",
     "moduleName": "shaun-site/components/navbar.hbs",
-    "isStrictMode": false
-  });
-
-  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, (0, _templateOnly.default)());
-
-  _exports.default = _default;
-});
-;define("shaun-site/components/pageheader", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component/template-only"eaimeta@70e063a35619d71f
-
-  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
-  /*
-    <br>
-  {{yield}}
-  */
-  {
-    "id": "N6zjsbXX",
-    "block": "[[[10,\"br\"],[12],[13],[1,\"\\n\"],[18,1,null]],[\"&default\"],false,[\"yield\"]]",
-    "moduleName": "shaun-site/components/pageheader.hbs",
     "isStrictMode": false
   });
 
@@ -357,6 +457,111 @@
   };
   _exports.default = _default;
 });
+;define("shaun-site/models/favgame", ["exports", "@ember-data/model"], function (_exports, _model) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _class, _descriptor, _descriptor2;
+
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/model"eaimeta@70e063a35619d71f
+
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  let FavgameModel = (_class = class FavgameModel extends _model.default {
+    constructor() {
+      super(...arguments);
+
+      _initializerDefineProperty(this, "gamename", _descriptor, this);
+
+      _initializerDefineProperty(this, "startyear", _descriptor2, this);
+    }
+
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "gamename", [_model.attr], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "startyear", [_model.attr], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  })), _class);
+  _exports.default = FavgameModel;
+});
+;define("shaun-site/models/modlist", ["exports", "@ember-data/model"], function (_exports, _model) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5;
+
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/model"eaimeta@70e063a35619d71f
+
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  let ModlistModel = (_class = class ModlistModel extends _model.default {
+    constructor() {
+      super(...arguments);
+
+      _initializerDefineProperty(this, "modname", _descriptor, this);
+
+      _initializerDefineProperty(this, "releaseyear", _descriptor2, this);
+
+      _initializerDefineProperty(this, "game", _descriptor3, this);
+
+      _initializerDefineProperty(this, "imagelink", _descriptor4, this);
+
+      _initializerDefineProperty(this, "link", _descriptor5, this);
+    }
+
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "modname", [_model.attr], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "releaseyear", [_model.attr], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "game", [_model.attr], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, "imagelink", [_model.attr], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor5 = _applyDecoratedDescriptor(_class.prototype, "link", [_model.attr], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  })), _class);
+  _exports.default = ModlistModel;
+});
 ;define("shaun-site/router", ["exports", "@ember/routing/router", "shaun-site/config/environment"], function (_exports, _router, _environment) {
   "use strict";
 
@@ -381,9 +586,93 @@
 
   _exports.default = Router;
   Router.map(function () {
-    this.route('favgames');
-    this.route('mymods');
+    this.route('favgame');
+    this.route('modlist');
   });
+});
+;define("shaun-site/routes/favgame", ["exports", "@ember/routing/route", "@ember/service", "rsvp"], function (_exports, _route, _service, _rsvp) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _class, _descriptor;
+
+  0; //eaimeta@70e063a35619d71f0,"@ember/routing/route",0,"@ember/service",0,"rsvp"eaimeta@70e063a35619d71f
+
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  let FavgameRoute = (_class = class FavgameRoute extends _route.default {
+    constructor() {
+      super(...arguments);
+
+      _initializerDefineProperty(this, "store", _descriptor, this);
+    }
+
+    async model() {
+      return _rsvp.default.hash({
+        favgames: this.store.findAll('favgame'),
+        modlists: this.store.findAll('modlist')
+      });
+    }
+
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "store", [_service.service], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  })), _class);
+  _exports.default = FavgameRoute;
+});
+;define("shaun-site/routes/modlist", ["exports", "@ember/routing/route", "@ember/service", "rsvp"], function (_exports, _route, _service, _rsvp) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _class, _descriptor;
+
+  0; //eaimeta@70e063a35619d71f0,"@ember/routing/route",0,"@ember/service",0,"rsvp"eaimeta@70e063a35619d71f
+
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  let ModlistRoute = (_class = class ModlistRoute extends _route.default {
+    constructor() {
+      super(...arguments);
+
+      _initializerDefineProperty(this, "store", _descriptor, this);
+    }
+
+    async model() {
+      return _rsvp.default.hash({
+        favgames: this.store.findAll('favgame'),
+        modlists: this.store.findAll('modlist')
+      });
+    }
+
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "store", [_service.service], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  })), _class);
+  _exports.default = ModlistRoute;
 });
 ;define("shaun-site/serializers/-default", ["exports", "@ember-data/serializer/json"], function (_exports, _json) {
   "use strict";
@@ -426,6 +715,19 @@
     }
   });
   0; //eaimeta@70e063a35619d71f0,"@ember-data/serializer/rest"eaimeta@70e063a35619d71f
+});
+;define("shaun-site/serializers/application", ["exports", "@ember-data/serializer/json-api"], function (_exports, _jsonApi) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/serializer/json-api"eaimeta@70e063a35619d71f
+
+  class ApplicationSerializer extends _jsonApi.default {}
+
+  _exports.default = ApplicationSerializer;
 });
 ;define("shaun-site/services/-ensure-registered", ["exports", "@embroider/util/services/ensure-registered"], function (_exports, _ensureRegistered) {
   "use strict";
@@ -511,7 +813,7 @@
 
   _exports.default = _default;
 });
-;define("shaun-site/templates/favgames", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
+;define("shaun-site/templates/favgame", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -522,14 +824,22 @@
 
   var _default = (0, _templateFactory.createTemplateFactory)(
   /*
-    <Pageheader>
-  <h2>My Favourite Games</h2>
-  </Pageheader>
+    <h1>My Favourite Games</h1>
+  
+  {{#each @model.favgames as |favgame|}}
+      <div id="favgames">
+          <br>
+          <h3>Game Name: {{favgame.gamename}}</h3>
+          <br>
+          <h3>Release year: {{favgame.startyear}}</h3>
+      </div>
+        
+  {{/each}}
   */
   {
-    "id": "Uu2A5xsN",
-    "block": "[[[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n\"],[10,\"h2\"],[12],[1,\"My Favourite Games\"],[13],[1,\"\\n\"]],[]]]]]],[],false,[\"pageheader\"]]",
-    "moduleName": "shaun-site/templates/favgames.hbs",
+    "id": "48msHD1h",
+    "block": "[[[10,\"h1\"],[12],[1,\"My Favourite Games\"],[13],[1,\"\\n\\n\"],[42,[28,[37,1],[[28,[37,1],[[30,1,[\"favgames\"]]],null]],null],null,[[[1,\"    \"],[10,0],[14,1,\"favgames\"],[12],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"h3\"],[12],[1,\"Game Name: \"],[1,[30,2,[\"gamename\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"h3\"],[12],[1,\"Release year: \"],[1,[30,2,[\"startyear\"]]],[13],[1,\"\\n    \"],[13],[1,\"\\n      \\n\"]],[2]],null]],[\"@model\",\"favgame\"],false,[\"each\",\"-track-array\"]]",
+    "moduleName": "shaun-site/templates/favgame.hbs",
     "isStrictMode": false
   });
 
@@ -546,20 +856,19 @@
 
   var _default = (0, _templateFactory.createTemplateFactory)(
   /*
-    <Pageheader>
-  <h2>Main Page</h2>
-  </Pageheader>
+    <h1>Main Page</h1>
+  
   */
   {
-    "id": "K2N1YR4D",
-    "block": "[[[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n\"],[10,\"h2\"],[12],[1,\"Main Page\"],[13],[1,\"\\n\"]],[]]]]]],[],false,[\"pageheader\"]]",
+    "id": "pg5OYyv8",
+    "block": "[[[10,\"h1\"],[12],[1,\"Main Page\"],[13],[1,\"\\n\"]],[],false,[]]",
     "moduleName": "shaun-site/templates/index.hbs",
     "isStrictMode": false
   });
 
   _exports.default = _default;
 });
-;define("shaun-site/templates/mymods", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
+;define("shaun-site/templates/modlist", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -570,14 +879,32 @@
 
   var _default = (0, _templateFactory.createTemplateFactory)(
   /*
-    <Pageheader>
-  <h2>My Mods</h2>
-  </Pageheader>
+    <h1>My Mods</h1>
+  
+  {{#each @model.modlists as |modlist|}}
+      <div id="modlists">
+          <br>
+          <h3>---------------------------------------------------------------------------------------------------------</h3>
+          <Imagehandler
+          src={{modlist.imagelink}}
+          alt="A picture of {{modlist.modname}}"
+          />
+          <br>
+          <h1>Mod Name: {{modlist.modname}}</h1>
+          <br>
+          <h3>Release Year: {{modlist.releaseyear}}</h3>
+          <br>
+          <h3>Game: {{modlist.game}}</h3>
+          <br>
+          <a href="{{modlist.link}}">Download {{modlist.modname}}</a>
+      </div>
+        
+  {{/each}}
   */
   {
-    "id": "wQP1fk3d",
-    "block": "[[[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n\"],[10,\"h2\"],[12],[1,\"My Mods\"],[13],[1,\"\\n\"]],[]]]]]],[],false,[\"pageheader\"]]",
-    "moduleName": "shaun-site/templates/mymods.hbs",
+    "id": "h/0g+t5/",
+    "block": "[[[10,\"h1\"],[12],[1,\"My Mods\"],[13],[1,\"\\n\\n\"],[42,[28,[37,1],[[28,[37,1],[[30,1,[\"modlists\"]]],null]],null],null,[[[1,\"    \"],[10,0],[14,1,\"modlists\"],[12],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"h3\"],[12],[1,\"---------------------------------------------------------------------------------------------------------\"],[13],[1,\"\\n        \"],[8,[39,2],[[16,\"src\",[30,2,[\"imagelink\"]]],[16,\"alt\",[29,[\"A picture of \",[30,2,[\"modname\"]]]]]],null,null],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"h1\"],[12],[1,\"Mod Name: \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"h3\"],[12],[1,\"Release Year: \"],[1,[30,2,[\"releaseyear\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"h3\"],[12],[1,\"Game: \"],[1,[30,2,[\"game\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,3],[15,6,[29,[[30,2,[\"link\"]]]]],[12],[1,\"Download \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n    \"],[13],[1,\"\\n      \\n\"]],[2]],null]],[\"@model\",\"modlist\"],false,[\"each\",\"-track-array\",\"imagehandler\"]]",
+    "moduleName": "shaun-site/templates/modlist.hbs",
     "isStrictMode": false
   });
 
@@ -662,7 +989,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("shaun-site/app")["default"].create({"name":"shaun-site","version":"0.0.0+c5ecd24b"});
+            require("shaun-site/app")["default"].create({"name":"shaun-site","version":"0.0.0+f34e4999"});
           }
         
 //# sourceMappingURL=shaun-site.map

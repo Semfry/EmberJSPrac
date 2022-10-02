@@ -1,0 +1,18 @@
+{{#each @model.modlists as |modlist|}}
+    <div id="modlists">
+        <br>
+        <Imagehandler
+        src={{@modlist.imagelink}}
+        alt="A picture of {{@modlist.modname}}"
+        />
+        <br>
+        <li>Mod Name: {{modlist.modname}}</li>
+        <br>
+        <li>Release Year: {{modlist.releaseyear}}</li>
+        <br>
+        <li>Game: {{modlist.game}}</li>
+        <br>
+        <a href="{{modlist.link}}">Download {{modlist.modname}}</a>
+    </div>
+      
+{{/each}}

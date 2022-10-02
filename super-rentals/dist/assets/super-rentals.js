@@ -129,10 +129,12 @@
       width={{@width}} height={{@height}}
     >
   </div>
+  
+  
   */
   {
-    "id": "Qf2J7h8t",
-    "block": "[[[10,0],[14,0,\"map\"],[12],[1,\"\\n  \"],[11,\"img\"],[16,\"alt\",[29,[\"Map image at coordinates \",[30,1],\",\",[30,2]]]],[17,3],[24,\"src\",\"https://maps.geoapify.com/v1/staticmap?style=osm-carto&width=600&height=400&center=lonlat:-122.304378,47.526022&zoom=14&apiKey=b8c890bea2854f599e6f45d128adcb61\"],[16,\"width\",[30,4]],[16,\"height\",[30,5]],[12],[13],[1,\"\\n\"],[13]],[\"@lat\",\"@lng\",\"&attrs\",\"@width\",\"@height\"],false,[]]",
+    "id": "sESctqzo",
+    "block": "[[[10,0],[14,0,\"map\"],[12],[1,\"\\n  \"],[11,\"img\"],[16,\"alt\",[29,[\"Map image at coordinates \",[30,1],\",\",[30,2]]]],[17,3],[24,\"src\",\"https://maps.geoapify.com/v1/staticmap?style=osm-carto&width=600&height=400&center=lonlat:-122.304378,47.526022&zoom=14&apiKey=b8c890bea2854f599e6f45d128adcb61\"],[16,\"width\",[30,4]],[16,\"height\",[30,5]],[12],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\"]],[\"@lat\",\"@lng\",\"&attrs\",\"@width\",\"@height\"],false,[]]",
     "moduleName": "super-rentals/components/map.hbs",
     "isStrictMode": false
   });
@@ -221,16 +223,16 @@
     <Map
       @lat={{@rental.location.lat}}
       @lng={{@rental.location.lng}}
-      @zoom="9"
-      @width="150"
-      @height="150"
+      @zoom="14"
+      @width="600"
+      @height="400"
       alt="A map of {{@rental.title}}"
     />
   </article>
   */
   {
-    "id": "Z5gIjF/H",
-    "block": "[[[10,\"article\"],[14,0,\"rental\"],[12],[1,\"\\n    \"],[8,[39,0],[[16,\"src\",[30,1,[\"image\"]]],[16,\"alt\",[29,[\"A picture of \",[30,1,[\"title\"]]]]]],null,null],[1,\"\\n  \"],[10,0],[14,0,\"details\"],[12],[1,\"\\n    \"],[10,\"h3\"],[12],[1,\"\\n      \"],[8,[39,1],null,[[\"@route\",\"@model\"],[\"rental\",[30,1]]],[[\"default\"],[[[[1,\"\\n        \"],[1,[30,1,[\"title\"]]],[1,\"\\n      \"]],[]]]]],[1,\"\\n    \"],[13],[1,\"\\n    \"],[10,0],[14,0,\"detail owner\"],[12],[1,\"\\n      \"],[10,1],[12],[1,\"Owner:\"],[13],[1,\" \"],[1,[30,1,[\"owner\"]]],[1,\"\\n    \"],[13],[1,\"\\n    \"],[10,0],[14,0,\"detail type\"],[12],[1,\"\\n      \"],[10,1],[12],[1,\"Type:\"],[13],[1,\" \"],[1,[30,1,[\"type\"]]],[1,\"\\n    \"],[13],[1,\"\\n    \"],[10,0],[14,0,\"detail location\"],[12],[1,\"\\n      \"],[10,1],[12],[1,\"Location:\"],[13],[1,\" \"],[1,[30,1,[\"city\"]]],[1,\"\\n    \"],[13],[1,\"\\n    \"],[10,0],[14,0,\"detail bedrooms\"],[12],[1,\"\\n      \"],[10,1],[12],[1,\"Number of bedrooms:\"],[13],[1,\" \"],[1,[30,1,[\"bedrooms\"]]],[1,\"\\n    \"],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[8,[39,2],[[16,\"alt\",[29,[\"A map of \",[30,1,[\"title\"]]]]]],[[\"@lat\",\"@lng\",\"@zoom\",\"@width\",\"@height\"],[[30,1,[\"location\",\"lat\"]],[30,1,[\"location\",\"lng\"]],\"9\",\"150\",\"150\"]],null],[1,\"\\n\"],[13]],[\"@rental\"],false,[\"rental/image\",\"link-to\",\"map\"]]",
+    "id": "LDuy9nIt",
+    "block": "[[[10,\"article\"],[14,0,\"rental\"],[12],[1,\"\\n    \"],[8,[39,0],[[16,\"src\",[30,1,[\"image\"]]],[16,\"alt\",[29,[\"A picture of \",[30,1,[\"title\"]]]]]],null,null],[1,\"\\n  \"],[10,0],[14,0,\"details\"],[12],[1,\"\\n    \"],[10,\"h3\"],[12],[1,\"\\n      \"],[8,[39,1],null,[[\"@route\",\"@model\"],[\"rental\",[30,1]]],[[\"default\"],[[[[1,\"\\n        \"],[1,[30,1,[\"title\"]]],[1,\"\\n      \"]],[]]]]],[1,\"\\n    \"],[13],[1,\"\\n    \"],[10,0],[14,0,\"detail owner\"],[12],[1,\"\\n      \"],[10,1],[12],[1,\"Owner:\"],[13],[1,\" \"],[1,[30,1,[\"owner\"]]],[1,\"\\n    \"],[13],[1,\"\\n    \"],[10,0],[14,0,\"detail type\"],[12],[1,\"\\n      \"],[10,1],[12],[1,\"Type:\"],[13],[1,\" \"],[1,[30,1,[\"type\"]]],[1,\"\\n    \"],[13],[1,\"\\n    \"],[10,0],[14,0,\"detail location\"],[12],[1,\"\\n      \"],[10,1],[12],[1,\"Location:\"],[13],[1,\" \"],[1,[30,1,[\"city\"]]],[1,\"\\n    \"],[13],[1,\"\\n    \"],[10,0],[14,0,\"detail bedrooms\"],[12],[1,\"\\n      \"],[10,1],[12],[1,\"Number of bedrooms:\"],[13],[1,\" \"],[1,[30,1,[\"bedrooms\"]]],[1,\"\\n    \"],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[8,[39,2],[[16,\"alt\",[29,[\"A map of \",[30,1,[\"title\"]]]]]],[[\"@lat\",\"@lng\",\"@zoom\",\"@width\",\"@height\"],[[30,1,[\"location\",\"lat\"]],[30,1,[\"location\",\"lng\"]],\"14\",\"600\",\"400\"]],null],[1,\"\\n\"],[13]],[\"@rental\"],false,[\"rental/image\",\"link-to\",\"map\"]]",
     "moduleName": "super-rentals/components/rental.hbs",
     "isStrictMode": false
   });
@@ -1296,7 +1298,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("super-rentals/app")["default"].create({"name":"super-rentals","version":"0.0.0+5db8de84"});
+            require("super-rentals/app")["default"].create({"name":"super-rentals","version":"0.0.0+c5ecd24b"});
           }
         
 //# sourceMappingURL=super-rentals.map

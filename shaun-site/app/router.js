@@ -7,6 +7,6 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('favgames');
-  this.route('mymods');
+  this.route('favgame');
+  this.route('modlist');
 });
