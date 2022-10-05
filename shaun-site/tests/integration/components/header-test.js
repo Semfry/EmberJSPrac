@@ -14,7 +14,7 @@ module('Integration | Component | header', function (hooks) {
 
     assert
       .dom(this.element)
-      .hasText("----------------------- Shaun's Site -----------------------");
+      .hasText("Shaun's Site");
 
     // Template block usage:
     await render(hbs`
@@ -25,6 +25,6 @@ module('Integration | Component | header', function (hooks) {
 
     assert
       .dom(this.element)
-      .hasText("----------------------- Shaun's Site -----------------------");
+      .hasText("Shaun's Site");
   });
 });

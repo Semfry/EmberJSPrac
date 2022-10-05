@@ -11,9 +11,9 @@ module.exports = function (defaults) {
         plugins: [
           { module: require('postcss-import') },
           require('tailwindcss')('./app/styles/tailwind.config.js'),
-        ]
-      }
-    }
+        ],
+      },
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated

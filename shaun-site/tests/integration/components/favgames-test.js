@@ -10,17 +10,17 @@ module('Integration | Component | favgames', function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<Favgames />`);
+    await render(hbs`<Favgame />`);
 
-    assert.dom(this.element).hasText('Game Name: Start Year:');
+    assert.dom(this.element).hasText('');
 
     // Template block usage:
     await render(hbs`
-      <Favgames>
+      <Favgame>
       Game Name: Start Year:
-      </Favgames>
+      </Favgame>
     `);
 
-    assert.dom(this.element).hasText('Game Name: Start Year:');
+    assert.dom(this.element).hasText('');
   });
 });

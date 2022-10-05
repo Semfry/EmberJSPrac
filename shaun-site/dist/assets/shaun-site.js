@@ -115,6 +115,44 @@
 
   _exports.default = _default;
 });
+;define("shaun-site/components/graphs", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component/template-only"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    <br>
+  <br>
+  <div class="graphs">
+  <hr>
+  <br>
+  <img src="assets/images/graph1.png" alt="Total Hours of Users by Code Type" width="1024" height="1024">
+  <br>
+  <hr>
+  <br>
+  <img src="assets/images/graph2.png" alt="Total Hours of Users" width="1024" height="1024">
+  <br>
+  <hr>
+  <br>
+  <img src="assets/images/graph3.png" alt="Total Billable and Non-Billable Hours of Users" width="1024" height="1024">
+  </div>
+  */
+  {
+    "id": "yqFiqYUh",
+    "block": "[[[10,\"br\"],[12],[13],[1,\"\\n\"],[10,\"br\"],[12],[13],[1,\"\\n\"],[10,0],[14,0,\"graphs\"],[12],[1,\"\\n\"],[10,\"hr\"],[12],[13],[1,\"\\n\"],[10,\"br\"],[12],[13],[1,\"\\n\"],[10,\"img\"],[14,\"src\",\"assets/images/graph1.png\"],[14,\"alt\",\"Total Hours of Users by Code Type\"],[14,\"width\",\"1024\"],[14,\"height\",\"1024\"],[12],[13],[1,\"\\n\"],[10,\"br\"],[12],[13],[1,\"\\n\"],[10,\"hr\"],[12],[13],[1,\"\\n\"],[10,\"br\"],[12],[13],[1,\"\\n\"],[10,\"img\"],[14,\"src\",\"assets/images/graph2.png\"],[14,\"alt\",\"Total Hours of Users\"],[14,\"width\",\"1024\"],[14,\"height\",\"1024\"],[12],[13],[1,\"\\n\"],[10,\"br\"],[12],[13],[1,\"\\n\"],[10,\"hr\"],[12],[13],[1,\"\\n\"],[10,\"br\"],[12],[13],[1,\"\\n\"],[10,\"img\"],[14,\"src\",\"assets/images/graph3.png\"],[14,\"alt\",\"Total Billable and Non-Billable Hours of Users\"],[14,\"width\",\"1024\"],[14,\"height\",\"1024\"],[12],[13],[1,\"\\n\"],[13]],[],false,[]]",
+    "moduleName": "shaun-site/components/graphs.hbs",
+    "isStrictMode": false
+  });
+
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, (0, _templateOnly.default)());
+
+  _exports.default = _default;
+});
 ;define("shaun-site/components/header", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
   "use strict";
 
@@ -127,14 +165,14 @@
   const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
   /*
     <div class="container">
-      <h2>-----------------------</h2>
+      <hr>
       <h1>Shaun's Site</h1>
-      <h2>-----------------------</h2>
+      <hr>
   </div>
   */
   {
-    "id": "P99Nhrpu",
-    "block": "[[[10,0],[14,0,\"container\"],[12],[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"-----------------------\"],[13],[1,\"\\n    \"],[10,\"h1\"],[12],[1,\"Shaun's Site\"],[13],[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"-----------------------\"],[13],[1,\"\\n\"],[13]],[],false,[]]",
+    "id": "sBdVC5bT",
+    "block": "[[[10,0],[14,0,\"container\"],[12],[1,\"\\n    \"],[10,\"hr\"],[12],[13],[1,\"\\n    \"],[10,\"h1\"],[12],[1,\"Shaun's Site\"],[13],[1,\"\\n    \"],[10,\"hr\"],[12],[13],[1,\"\\n\"],[13]],[],false,[]]",
     "moduleName": "shaun-site/components/header.hbs",
     "isStrictMode": false
   });
@@ -872,10 +910,13 @@
   /*
     <h1>Main Page</h1>
   
+  <Graphs />
+  
+  
   */
   {
-    "id": "pg5OYyv8",
-    "block": "[[[10,\"h1\"],[12],[1,\"Main Page\"],[13],[1,\"\\n\"]],[],false,[]]",
+    "id": "u6tb/LOt",
+    "block": "[[[10,\"h1\"],[12],[1,\"Main Page\"],[13],[1,\"\\n\\n\"],[8,[39,0],null,null,null],[1,\"\\n\\n\"]],[],false,[\"graphs\"]]",
     "moduleName": "shaun-site/templates/index.hbs",
     "isStrictMode": false
   });
@@ -898,7 +939,7 @@
   {{#each @model.modlists as |modlist|}}
       <div id="modlists">
           <br>
-          <h3>---------------------------------------------------------------------------------------------------------</h3>
+          <hr>
           <Imagehandler
           src={{modlist.imagelink}}
           alt="A picture of {{modlist.modname}}"
@@ -916,8 +957,8 @@
   {{/each}}
   */
   {
-    "id": "h/0g+t5/",
-    "block": "[[[10,\"h1\"],[12],[1,\"My Mods\"],[13],[1,\"\\n\\n\"],[42,[28,[37,1],[[28,[37,1],[[30,1,[\"modlists\"]]],null]],null],null,[[[1,\"    \"],[10,0],[14,1,\"modlists\"],[12],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"h3\"],[12],[1,\"---------------------------------------------------------------------------------------------------------\"],[13],[1,\"\\n        \"],[8,[39,2],[[16,\"src\",[30,2,[\"imagelink\"]]],[16,\"alt\",[29,[\"A picture of \",[30,2,[\"modname\"]]]]]],null,null],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"h1\"],[12],[1,\"Mod Name: \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"h3\"],[12],[1,\"Release Year: \"],[1,[30,2,[\"releaseyear\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"h3\"],[12],[1,\"Game: \"],[1,[30,2,[\"game\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,3],[15,6,[29,[[30,2,[\"link\"]]]]],[12],[1,\"Download \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n    \"],[13],[1,\"\\n      \\n\"]],[2]],null]],[\"@model\",\"modlist\"],false,[\"each\",\"-track-array\",\"imagehandler\"]]",
+    "id": "w03dpjIN",
+    "block": "[[[10,\"h1\"],[12],[1,\"My Mods\"],[13],[1,\"\\n\\n\"],[42,[28,[37,1],[[28,[37,1],[[30,1,[\"modlists\"]]],null]],null],null,[[[1,\"    \"],[10,0],[14,1,\"modlists\"],[12],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"hr\"],[12],[13],[1,\"\\n        \"],[8,[39,2],[[16,\"src\",[30,2,[\"imagelink\"]]],[16,\"alt\",[29,[\"A picture of \",[30,2,[\"modname\"]]]]]],null,null],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"h1\"],[12],[1,\"Mod Name: \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"h3\"],[12],[1,\"Release Year: \"],[1,[30,2,[\"releaseyear\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"h3\"],[12],[1,\"Game: \"],[1,[30,2,[\"game\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,3],[15,6,[29,[[30,2,[\"link\"]]]]],[12],[1,\"Download \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n    \"],[13],[1,\"\\n      \\n\"]],[2]],null]],[\"@model\",\"modlist\"],false,[\"each\",\"-track-array\",\"imagehandler\"]]",
     "moduleName": "shaun-site/templates/modlist.hbs",
     "isStrictMode": false
   });
@@ -1003,7 +1044,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("shaun-site/app")["default"].create({"name":"shaun-site","version":"0.0.0+b10b8d37"});
+            require("shaun-site/app")["default"].create({"name":"shaun-site","version":"0.0.0+00ae5382"});
           }
         
 //# sourceMappingURL=shaun-site.map

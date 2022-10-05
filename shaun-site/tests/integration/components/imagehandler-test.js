@@ -21,6 +21,6 @@ module('Integration | Component | imagehandler', function (hooks) {
       </Imagehandler>
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).hasText('');
   });
 });
