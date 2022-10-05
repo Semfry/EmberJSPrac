@@ -1,8 +1,7 @@
 
-* {
-  margin: 0;
-  padding: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body,
 h1,
@@ -16,33 +15,34 @@ div,
 span,
 a,
 button {
-    color: white;
-    font-size: 40;
+  @apply text-white;
   }
-  
-  a {
+
+
+  /* a {
     font-size: 20;
     color: aqua;
-  }
-  
+  } */
+
+/*   
   p {
     color: white;
     font-size: 25;
-  }
-  
+  } */
+
   body {
-    background: black;
+    @apply bg-black;
   }
-  
-  label {
+
+  /* label {
     color: white;
     font-size: 25;
-  }
+  }  */
 
 /**
  * Top Navigation
  */
-
+/* 
  .menu {
   height: 4em;
   background-color: #677ae4;
@@ -120,4 +120,4 @@ button {
 
 .menu li:hover {
   background: #f3f3f3;
-}
+} */

@@ -126,15 +126,15 @@
 
   const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
   /*
-    <div class="title">
+    <div class="container">
       <h2>-----------------------</h2>
       <h1>Shaun's Site</h1>
       <h2>-----------------------</h2>
   </div>
   */
   {
-    "id": "jXVeM9R/",
-    "block": "[[[10,0],[14,0,\"title\"],[12],[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"-----------------------\"],[13],[1,\"\\n    \"],[10,\"h1\"],[12],[1,\"Shaun's Site\"],[13],[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"-----------------------\"],[13],[1,\"\\n\"],[13]],[],false,[]]",
+    "id": "P99Nhrpu",
+    "block": "[[[10,0],[14,0,\"container\"],[12],[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"-----------------------\"],[13],[1,\"\\n    \"],[10,\"h1\"],[12],[1,\"Shaun's Site\"],[13],[1,\"\\n    \"],[10,\"h2\"],[12],[1,\"-----------------------\"],[13],[1,\"\\n\"],[13]],[],false,[]]",
     "moduleName": "shaun-site/components/header.hbs",
     "isStrictMode": false
   });
@@ -785,6 +785,20 @@
   });
   0; //eaimeta@70e063a35619d71f0,"ember-data/store"eaimeta@70e063a35619d71f
 });
+;define("shaun-site/styles/tailwind.config", [], function () {
+  "use strict";
+
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
+
+  /** @type {import('tailwindcss').Config} */
+  module.exports = {
+    content: ['./app/**/*.hbs'],
+    theme: {
+      extend: {}
+    },
+    plugins: []
+  };
+});
 ;define("shaun-site/templates/application", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
   "use strict";
 
@@ -796,17 +810,17 @@
 
   var _default = (0, _templateFactory.createTemplateFactory)(
   /*
-    <div class="container">
+    <div>
     <Navbar />
-    <div class="body">
+    <body>
       <Header />
       {{outlet}}
-    </div>
+    </body>
   </div>
   */
   {
-    "id": "hTT54TPK",
-    "block": "[[[10,0],[14,0,\"container\"],[12],[1,\"\\n  \"],[8,[39,0],null,null,null],[1,\"\\n  \"],[10,0],[14,0,\"body\"],[12],[1,\"\\n    \"],[8,[39,1],null,null,null],[1,\"\\n    \"],[46,[28,[37,3],null,null],null,null,null],[1,\"\\n  \"],[13],[1,\"\\n\"],[13]],[],false,[\"navbar\",\"header\",\"component\",\"-outlet\"]]",
+    "id": "Oo4YRrVy",
+    "block": "[[[10,0],[12],[1,\"\\n  \"],[8,[39,0],null,null,null],[1,\"\\n  \"],[10,\"body\"],[12],[1,\"\\n    \"],[8,[39,1],null,null,null],[1,\"\\n    \"],[46,[28,[37,3],null,null],null,null,null],[1,\"\\n  \"],[13],[1,\"\\n\"],[13]],[],false,[\"navbar\",\"header\",\"component\",\"-outlet\"]]",
     "moduleName": "shaun-site/templates/application.hbs",
     "isStrictMode": false
   });
@@ -989,7 +1003,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("shaun-site/app")["default"].create({"name":"shaun-site","version":"0.0.0+f34e4999"});
+            require("shaun-site/app")["default"].create({"name":"shaun-site","version":"0.0.0+b10b8d37"});
           }
         
 //# sourceMappingURL=shaun-site.map
