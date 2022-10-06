@@ -1,13 +1,21 @@
-<nav class="menu">
-  <LinkTo @route="index" class="menu-index">
-    <h1>Main Page</h1>
-  </LinkTo>
-  <div class="links">
-    <LinkTo @route="favgame" class="menu-favgames">
-      Favourite Games
-    </LinkTo>
-    <LinkTo @route="modlist" class="menu-modlists">
-      My Mods
-    </LinkTo>
+<nav class="bg-yellow-500 border border-gray-200 px-2 py-2 rounded">
+  <div>
+    <ul class="flex flex-auto">
+      <li class="mr-6">
+        <LinkTo @route="index" class="menu-index">
+          <a class="text-blue-500 hover:text-blue-800 text-3xl font-bold underline" href="#">  Main Page  </a>
+        </LinkTo>
+      </li>
+      <li class="mr-6">
+        <LinkTo @route="favgame" class="menu-favgames">
+          <a class="text-blue-500 hover:text-blue-800 text-3xl font-bold underline" href="#">Favourite Games</a>
+        </LinkTo>
+        </li>
+        <li class="mr-6">
+        <LinkTo @route="modlist" class="menu-modlists">
+          <a class="text-blue-500 hover:text-blue-800 text-3xl font-bold underline" href="#">My Mods</a>
+        </LinkTo>
+        </li>
+    </ul>
   </div>
 </nav>

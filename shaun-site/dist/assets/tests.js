@@ -53,46 +53,6 @@ define("shaun-site/tests/helpers/index", ["exports", "ember-qunit"], function (_
     (0, _emberQunit.setupTest)(hooks, options); // Additional setup for unit tests can be done here.
   }
 });
-define("shaun-site/tests/integration/components/favgamehandler-test", ["@ember/template-factory", "qunit", "shaun-site/tests/helpers", "@ember/test-helpers"], function (_templateFactory, _qunit, _helpers, _testHelpers) {
-  "use strict";
-
-  0; //eaimeta@70e063a35619d71f0,"qunit",0,"shaun-site/tests/helpers",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
-
-  (0, _qunit.module)('Integration | Component | favgamehandler', function (hooks) {
-    (0, _helpers.setupRenderingTest)(hooks);
-    (0, _qunit.test)('it renders', async function (assert) {
-      // Set any properties with this.set('myProperty', 'value');
-      // Handle any actions with this.set('myAction', function(val) { ... });
-      await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
-      /*
-        <Favgamehandler />
-      */
-      {
-        "id": "w4sEtYfx",
-        "block": "[[[8,[39,0],null,null,null]],[],false,[\"favgamehandler\"]]",
-        "moduleName": "(unknown template module)",
-        "isStrictMode": false
-      }));
-      assert.dom(this.element).hasText(''); // Template block usage:
-
-      await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
-      /*
-        
-            <Favgamehandler>
-              template block text
-            </Favgamehandler>
-          
-      */
-      {
-        "id": "2vvL6jeL",
-        "block": "[[[1,\"\\n      \"],[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n        template block text\\n      \"]],[]]]]],[1,\"\\n    \"]],[],false,[\"favgamehandler\"]]",
-        "moduleName": "(unknown template module)",
-        "isStrictMode": false
-      }));
-      assert.dom(this.element).hasText('template block text');
-    });
-  });
-});
 define("shaun-site/tests/integration/components/favgames-test", ["@ember/template-factory", "qunit", "shaun-site/tests/helpers", "@ember/test-helpers"], function (_templateFactory, _qunit, _helpers, _testHelpers) {
   "use strict";
 
@@ -105,31 +65,31 @@ define("shaun-site/tests/integration/components/favgames-test", ["@ember/templat
       // Handle any actions with this.set('myAction', function(val) { ... });
       await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
       /*
-        <Favgames />
+        <Favgame />
       */
       {
-        "id": "b21AcDvU",
-        "block": "[[[8,[39,0],null,null,null]],[],false,[\"favgames\"]]",
+        "id": "T+3EgH5o",
+        "block": "[[[8,[39,0],null,null,null]],[],false,[\"favgame\"]]",
         "moduleName": "(unknown template module)",
         "isStrictMode": false
       }));
-      assert.dom(this.element).hasText('Game Name: Start Year:'); // Template block usage:
+      assert.dom(this.element).hasText(''); // Template block usage:
 
       await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
       /*
         
-            <Favgames>
+            <Favgame>
             Game Name: Start Year:
-            </Favgames>
+            </Favgame>
           
       */
       {
-        "id": "wtwt/1gG",
-        "block": "[[[1,\"\\n      \"],[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n      Game Name: Start Year:\\n      \"]],[]]]]],[1,\"\\n    \"]],[],false,[\"favgames\"]]",
+        "id": "BZ6OoBb8",
+        "block": "[[[1,\"\\n      \"],[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n      Game Name: Start Year:\\n      \"]],[]]]]],[1,\"\\n    \"]],[],false,[\"favgame\"]]",
         "moduleName": "(unknown template module)",
         "isStrictMode": false
       }));
-      assert.dom(this.element).hasText('Game Name: Start Year:');
+      assert.dom(this.element).hasText('');
     });
   });
 });
@@ -159,17 +119,16 @@ define("shaun-site/tests/integration/components/graphs-test", ["@ember/template-
       /*
         
             <Graphs>
-              template block text
             </Graphs>
           
       */
       {
-        "id": "PqlQJNTC",
-        "block": "[[[1,\"\\n      \"],[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n        template block text\\n      \"]],[]]]]],[1,\"\\n    \"]],[],false,[\"graphs\"]]",
+        "id": "Ic7lYQm5",
+        "block": "[[[1,\"\\n      \"],[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n      \"]],[]]]]],[1,\"\\n    \"]],[],false,[\"graphs\"]]",
         "moduleName": "(unknown template module)",
         "isStrictMode": false
       }));
-      assert.dom(this.element).hasText('template block text');
+      assert.dom(this.element).hasText('');
     });
   });
 });
@@ -193,7 +152,7 @@ define("shaun-site/tests/integration/components/header-test", ["@ember/template-
         "moduleName": "(unknown template module)",
         "isStrictMode": false
       }));
-      assert.dom(this.element).hasText("----------------------- Shaun's Site -----------------------"); // Template block usage:
+      assert.dom(this.element).hasText("Shaun's Site"); // Template block usage:
 
       await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
       /*
@@ -209,7 +168,7 @@ define("shaun-site/tests/integration/components/header-test", ["@ember/template-
         "moduleName": "(unknown template module)",
         "isStrictMode": false
       }));
-      assert.dom(this.element).hasText("----------------------- Shaun's Site -----------------------");
+      assert.dom(this.element).hasText("Shaun's Site");
     });
   });
 });
@@ -249,47 +208,7 @@ define("shaun-site/tests/integration/components/imagehandler-test", ["@ember/tem
         "moduleName": "(unknown template module)",
         "isStrictMode": false
       }));
-      assert.dom(this.element).hasText('template block text');
-    });
-  });
-});
-define("shaun-site/tests/integration/components/modlisthandler-test", ["@ember/template-factory", "qunit", "shaun-site/tests/helpers", "@ember/test-helpers"], function (_templateFactory, _qunit, _helpers, _testHelpers) {
-  "use strict";
-
-  0; //eaimeta@70e063a35619d71f0,"qunit",0,"shaun-site/tests/helpers",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
-
-  (0, _qunit.module)('Integration | Component | modlisthandler', function (hooks) {
-    (0, _helpers.setupRenderingTest)(hooks);
-    (0, _qunit.test)('it renders', async function (assert) {
-      // Set any properties with this.set('myProperty', 'value');
-      // Handle any actions with this.set('myAction', function(val) { ... });
-      await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
-      /*
-        <Modlisthandler />
-      */
-      {
-        "id": "fg3it638",
-        "block": "[[[8,[39,0],null,null,null]],[],false,[\"modlisthandler\"]]",
-        "moduleName": "(unknown template module)",
-        "isStrictMode": false
-      }));
-      assert.dom(this.element).hasText(''); // Template block usage:
-
-      await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
-      /*
-        
-            <Modlisthandler>
-              template block text
-            </Modlisthandler>
-          
-      */
-      {
-        "id": "Ha53U5RS",
-        "block": "[[[1,\"\\n      \"],[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n        template block text\\n      \"]],[]]]]],[1,\"\\n    \"]],[],false,[\"modlisthandler\"]]",
-        "moduleName": "(unknown template module)",
-        "isStrictMode": false
-      }));
-      assert.dom(this.element).hasText('template block text');
+      assert.dom(this.element).hasText('');
     });
   });
 });
@@ -313,7 +232,7 @@ define("shaun-site/tests/integration/components/modslist-test", ["@ember/templat
         "moduleName": "(unknown template module)",
         "isStrictMode": false
       }));
-      assert.dom(this.element).hasText('Mod Name: Release Year: Game Name: Download Link:'); // Template block usage:
+      assert.dom(this.element).hasText(''); // Template block usage:
 
       await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
       /*
@@ -329,7 +248,7 @@ define("shaun-site/tests/integration/components/modslist-test", ["@ember/templat
         "moduleName": "(unknown template module)",
         "isStrictMode": false
       }));
-      assert.dom(this.element).hasText('Mod Name: Release Year: Game Name: Download Link:');
+      assert.dom(this.element).hasText("Mod Name: Release Year: Game Name: Download Link:\"");
     });
   });
 });
@@ -411,32 +330,17 @@ define("shaun-site/tests/unit/models/favgame-test", ["qunit", "shaun-site/tests/
     });
   });
 });
-define("shaun-site/tests/unit/models/favgames-test", ["qunit", "shaun-site/tests/helpers"], function (_qunit, _helpers) {
-  "use strict";
-
-  0; //eaimeta@70e063a35619d71f0,"qunit",0,"shaun-site/tests/helpers"eaimeta@70e063a35619d71f
-
-  (0, _qunit.module)('Unit | Model | favgames', function (hooks) {
-    (0, _helpers.setupTest)(hooks); // Replace this with your real tests.
-
-    (0, _qunit.test)('it exists', function (assert) {
-      let store = this.owner.lookup('service:store');
-      let model = store.createRecord('favgames', {});
-      assert.ok(model);
-    });
-  });
-});
 define("shaun-site/tests/unit/models/modslist-test", ["qunit", "shaun-site/tests/helpers"], function (_qunit, _helpers) {
   "use strict";
 
   0; //eaimeta@70e063a35619d71f0,"qunit",0,"shaun-site/tests/helpers"eaimeta@70e063a35619d71f
 
-  (0, _qunit.module)('Unit | Model | modlists', function (hooks) {
+  (0, _qunit.module)('Unit | Model | modlist', function (hooks) {
     (0, _helpers.setupTest)(hooks); // Replace this with your real tests.
 
     (0, _qunit.test)('it exists', function (assert) {
       let store = this.owner.lookup('service:store');
-      let model = store.createRecord('modlists', {});
+      let model = store.createRecord('modlist', {});
       assert.ok(model);
     });
   });
@@ -446,10 +350,10 @@ define("shaun-site/tests/unit/routes/favgames-test", ["qunit", "shaun-site/tests
 
   0; //eaimeta@70e063a35619d71f0,"qunit",0,"shaun-site/tests/helpers"eaimeta@70e063a35619d71f
 
-  (0, _qunit.module)('Unit | Route | favgames', function (hooks) {
+  (0, _qunit.module)('Unit | Route | favgame', function (hooks) {
     (0, _helpers.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
-      let route = this.owner.lookup('route:favgames');
+      let route = this.owner.lookup('route:favgame');
       assert.ok(route);
     });
   });
@@ -463,19 +367,6 @@ define("shaun-site/tests/unit/routes/modlist-test", ["qunit", "shaun-site/tests/
     (0, _helpers.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
       let route = this.owner.lookup('route:modlist');
-      assert.ok(route);
-    });
-  });
-});
-define("shaun-site/tests/unit/routes/modslist-test", ["qunit", "shaun-site/tests/helpers"], function (_qunit, _helpers) {
-  "use strict";
-
-  0; //eaimeta@70e063a35619d71f0,"qunit",0,"shaun-site/tests/helpers"eaimeta@70e063a35619d71f
-
-  (0, _qunit.module)('Unit | Route | modlists', function (hooks) {
-    (0, _helpers.setupTest)(hooks);
-    (0, _qunit.test)('it exists', function (assert) {
-      let route = this.owner.lookup('route:modlists');
       assert.ok(route);
     });
   });
@@ -495,7 +386,7 @@ define("shaun-site/tests/unit/serializers/application-test", ["qunit", "shaun-si
     });
     (0, _qunit.test)('it serializes records', function (assert) {
       let store = this.owner.lookup('service:store');
-      let record = store.createRecord('favgames', 'modlists', {});
+      let record = store.createRecord('favgame', 'modlist', {});
       let serializedRecord = record.serialize();
       assert.ok(serializedRecord);
     });
