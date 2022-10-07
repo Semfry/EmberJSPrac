@@ -95374,7 +95374,7 @@ return src;
 
   const _crypto = isFastBoot ? FastBoot.require('crypto') : window.crypto;
 
-  if (runtime.macroCondition(runtime.config("/home/shaun/dev/learn/EmberJSPrac/shaun-site/node_modules/@ember-data/store").polyfillUUID)) {
+  if (runtime.macroCondition(runtime.config("C:\\GitHub\\EmberJSPrac\\shaun-site\\node_modules\\@ember-data\\store").polyfillUUID)) {
     installPolyfill();
   }
 
@@ -104416,9 +104416,9 @@ return src;
   function initializeRuntimeMacrosConfig() {
     return {
       "packages": {
-        "/home/shaun/dev/learn/EmberJSPrac/shaun-site/node_modules/@ember-data/model": {},
-        "/home/shaun/dev/learn/EmberJSPrac/shaun-site/node_modules/@ember-data/store": {},
-        "/home/shaun/dev/learn/EmberJSPrac/shaun-site/node_modules/ember-data": {}
+        "C:\\GitHub\\EmberJSPrac\\shaun-site\\node_modules\\@ember-data\\model": {},
+        "C:\\GitHub\\EmberJSPrac\\shaun-site\\node_modules\\@ember-data\\store": {},
+        "C:\\GitHub\\EmberJSPrac\\shaun-site\\node_modules\\ember-data": {}
       },
       "global": {
         "@embroider/macros": {

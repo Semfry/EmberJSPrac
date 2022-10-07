@@ -106,21 +106,22 @@
 
   const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
   /*
-    {{#each @model.favgames as |favgame|}}
-      <div class="flex flex-col" id="favgames">
-          <br>
-          <ul class="ml-4 text-xl border border-gray-900">
-              <h3>Game Name: {{favgame.gamename}}</h3>
-              <h3>Release year: {{favgame.startyear}}</h3>
-          </ul>
-          <div class="pb-9"></div>
-      </div>
-  
-  {{/each}}
+    <article>
+      {{#each @model.favgames as |favgame|}}
+          <div class="flex flex-col" id="favgames">
+              <br>
+              <ul class="ml-4 text-xl border border-gray-900">
+                  <h3>Game Name: {{favgame.gamename}}</h3>
+                  <h3>Release year: {{favgame.startyear}}</h3>
+              </ul>
+              <div class="pb-9"></div>
+          </div>
+      {{/each}}
+  </article>
   */
   {
-    "id": "7aafIoQ5",
-    "block": "[[[42,[28,[37,1],[[28,[37,1],[[30,1,[\"favgames\"]]],null]],null],null,[[[1,\"    \"],[10,0],[14,0,\"flex flex-col\"],[14,1,\"favgames\"],[12],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"ul\"],[14,0,\"ml-4 text-xl border border-gray-900\"],[12],[1,\"\\n            \"],[10,\"h3\"],[12],[1,\"Game Name: \"],[1,[30,2,[\"gamename\"]]],[13],[1,\"\\n            \"],[10,\"h3\"],[12],[1,\"Release year: \"],[1,[30,2,[\"startyear\"]]],[13],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,0],[14,0,\"pb-9\"],[12],[13],[1,\"\\n    \"],[13],[1,\"\\n\\n\"]],[2]],null]],[\"@model\",\"favgame\"],false,[\"each\",\"-track-array\"]]",
+    "id": "lAzmO94O",
+    "block": "[[[10,\"article\"],[12],[1,\"\\n\"],[42,[28,[37,1],[[28,[37,1],[[30,1,[\"favgames\"]]],null]],null],null,[[[1,\"        \"],[10,0],[14,0,\"flex flex-col\"],[14,1,\"favgames\"],[12],[1,\"\\n            \"],[10,\"br\"],[12],[13],[1,\"\\n            \"],[10,\"ul\"],[14,0,\"ml-4 text-xl border border-gray-900\"],[12],[1,\"\\n                \"],[10,\"h3\"],[12],[1,\"Game Name: \"],[1,[30,2,[\"gamename\"]]],[13],[1,\"\\n                \"],[10,\"h3\"],[12],[1,\"Release year: \"],[1,[30,2,[\"startyear\"]]],[13],[1,\"\\n            \"],[13],[1,\"\\n            \"],[10,0],[14,0,\"pb-9\"],[12],[13],[1,\"\\n        \"],[13],[1,\"\\n\"]],[2]],null],[13]],[\"@model\",\"favgame\"],false,[\"each\",\"-track-array\"]]",
     "moduleName": "shaun-site/components/favgame.hbs",
     "isStrictMode": false
   });
@@ -236,28 +237,33 @@
 
   const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
   /*
-    {{#each @model.modlists as |modlist|}}
-      <div id="modlists">
+    <article>
+  {{#each @model.modlists as |modlist|}}
+      <div class="flex flex-col" id="modlists">
           <br>
-          <Imagehandler
-          src={{@modlist.imagelink}}
-          alt="A picture of {{@modlist.modname}}"
-          />
-          <br>
-          <li>Mod Name: {{modlist.modname}}</li>
-          <br>
-          <li>Release Year: {{modlist.releaseyear}}</li>
-          <br>
-          <li>Game: {{modlist.game}}</li>
-          <br>
-          <a href="{{modlist.link}}">Download {{modlist.modname}}</a>
+          <ul class="ml-4 text-xl">
+              <Imagehandler
+              src={{modlist.imagelink}}
+              alt="A picture of {{modlist.modname}}"
+              />
+              <div>
+                  <h3 class="text-2xl italic">Mod Name: {{modlist.modname}}</h3>
+                  <br>
+                  <h3>Release Year: {{modlist.releaseyear}}</h3>
+                  <br>
+                  <h3>Game: {{modlist.game}}</h3>
+                  <br>
+                  <a class="underline hover:text-gray-500 space-y-4" href="{{modlist.link}}">Download {{modlist.modname}}</a>
+              </div>
+          </ul>
+          <div class="pb-9"></div>
       </div>
-        
   {{/each}}
+  </article>
   */
   {
-    "id": "fTTLqrwA",
-    "block": "[[[42,[28,[37,1],[[28,[37,1],[[30,1,[\"modlists\"]]],null]],null],null,[[[1,\"    \"],[10,0],[14,1,\"modlists\"],[12],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[8,[39,2],[[16,\"src\",[30,3,[\"imagelink\"]]],[16,\"alt\",[29,[\"A picture of \",[30,3,[\"modname\"]]]]]],null,null],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"li\"],[12],[1,\"Mod Name: \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"li\"],[12],[1,\"Release Year: \"],[1,[30,2,[\"releaseyear\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"li\"],[12],[1,\"Game: \"],[1,[30,2,[\"game\"]]],[13],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,3],[15,6,[29,[[30,2,[\"link\"]]]]],[12],[1,\"Download \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n    \"],[13],[1,\"\\n      \\n\"]],[2]],null]],[\"@model\",\"modlist\",\"@modlist\"],false,[\"each\",\"-track-array\",\"imagehandler\"]]",
+    "id": "NFyeq9Qb",
+    "block": "[[[10,\"article\"],[12],[1,\"\\n\"],[42,[28,[37,1],[[28,[37,1],[[30,1,[\"modlists\"]]],null]],null],null,[[[1,\"    \"],[10,0],[14,0,\"flex flex-col\"],[14,1,\"modlists\"],[12],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"ul\"],[14,0,\"ml-4 text-xl\"],[12],[1,\"\\n            \"],[8,[39,2],[[16,\"src\",[30,2,[\"imagelink\"]]],[16,\"alt\",[29,[\"A picture of \",[30,2,[\"modname\"]]]]]],null,null],[1,\"\\n            \"],[10,0],[12],[1,\"\\n                \"],[10,\"h3\"],[14,0,\"text-2xl italic\"],[12],[1,\"Mod Name: \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n                \"],[10,\"br\"],[12],[13],[1,\"\\n                \"],[10,\"h3\"],[12],[1,\"Release Year: \"],[1,[30,2,[\"releaseyear\"]]],[13],[1,\"\\n                \"],[10,\"br\"],[12],[13],[1,\"\\n                \"],[10,\"h3\"],[12],[1,\"Game: \"],[1,[30,2,[\"game\"]]],[13],[1,\"\\n                \"],[10,\"br\"],[12],[13],[1,\"\\n                \"],[10,3],[14,0,\"underline hover:text-gray-500 space-y-4\"],[15,6,[29,[[30,2,[\"link\"]]]]],[12],[1,\"Download \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n            \"],[13],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,0],[14,0,\"pb-9\"],[12],[13],[1,\"\\n    \"],[13],[1,\"\\n\"]],[2]],null],[13]],[\"@model\",\"modlist\"],false,[\"each\",\"-track-array\",\"imagehandler\"]]",
     "moduleName": "shaun-site/components/modlist.hbs",
     "isStrictMode": false
   });
@@ -683,8 +689,7 @@
 
     async model() {
       return _rsvp.default.hash({
-        favgames: this.store.findAll('favgame'),
-        modlists: this.store.findAll('modlist')
+        favgames: this.store.findAll('favgame')
       });
     }
 
@@ -725,7 +730,6 @@
 
     async model() {
       return _rsvp.default.hash({
-        favgames: this.store.findAll('favgame'),
         modlists: this.store.findAll('modlist')
       });
     }
@@ -904,23 +908,11 @@
   /*
     <h1 class="text-4xl ml-5 pb-7 italic">My Favourite Games</h1>
   
-  {{!-- <Favgame @favgame={{@model}} /> --}}
-  
-  {{#each @model.favgames as |favgame|}}
-      <div class="flex flex-col" id="favgames">
-          <br>
-          <ul class="ml-4 text-xl border border-gray-900">
-              <h3>Game Name: {{favgame.gamename}}</h3>
-              <h3>Release year: {{favgame.startyear}}</h3>
-          </ul>
-          <div class="pb-9"></div>
-      </div>
-  
-  {{/each}}
+  <Favgame @model={{@model}} />
   */
   {
-    "id": "9+EMmTZ/",
-    "block": "[[[10,\"h1\"],[14,0,\"text-4xl ml-5 pb-7 italic\"],[12],[1,\"My Favourite Games\"],[13],[1,\"\\n\\n\"],[1,\"\\n\"],[42,[28,[37,1],[[28,[37,1],[[30,1,[\"favgames\"]]],null]],null],null,[[[1,\"    \"],[10,0],[14,0,\"flex flex-col\"],[14,1,\"favgames\"],[12],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"ul\"],[14,0,\"ml-4 text-xl border border-gray-900\"],[12],[1,\"\\n            \"],[10,\"h3\"],[12],[1,\"Game Name: \"],[1,[30,2,[\"gamename\"]]],[13],[1,\"\\n            \"],[10,\"h3\"],[12],[1,\"Release year: \"],[1,[30,2,[\"startyear\"]]],[13],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,0],[14,0,\"pb-9\"],[12],[13],[1,\"\\n    \"],[13],[1,\"\\n\\n\"]],[2]],null]],[\"@model\",\"favgame\"],false,[\"each\",\"-track-array\"]]",
+    "id": "FOZe9iEv",
+    "block": "[[[10,\"h1\"],[14,0,\"text-4xl ml-5 pb-7 italic\"],[12],[1,\"My Favourite Games\"],[13],[1,\"\\n\\n\"],[8,[39,0],null,[[\"@model\"],[[30,1]]],null]],[\"@model\"],false,[\"favgame\"]]",
     "moduleName": "shaun-site/templates/favgame.hbs",
     "isStrictMode": false
   });
@@ -976,32 +968,11 @@
   /*
     <h1 class="text-4xl ml-5 pb-7 italic">My Mods</h1>
   
-  {{#each @model.modlists as |modlist|}}
-      <div class="flex flex-col" id="modlists">
-          <br>
-          <ul class="ml-4 text-xl">
-              <Imagehandler
-              src={{modlist.imagelink}}
-              alt="A picture of {{modlist.modname}}"
-              />
-              <div>
-                  <h3 class="text-2xl italic">Mod Name: {{modlist.modname}}</h3>
-                  <br>
-                  <h3>Release Year: {{modlist.releaseyear}}</h3>
-                  <br>
-                  <h3>Game: {{modlist.game}}</h3>
-                  <br>
-                  <a class="underline hover:text-gray-500 space-y-4" href="{{modlist.link}}">Download {{modlist.modname}}</a>
-              </div>
-          </ul>
-          <div class="pb-9"></div>
-      </div>
-        
-  {{/each}}
+  <Modlist @model={{@model}} />
   */
   {
-    "id": "MgSzqr0+",
-    "block": "[[[10,\"h1\"],[14,0,\"text-4xl ml-5 pb-7 italic\"],[12],[1,\"My Mods\"],[13],[1,\"\\n\\n\"],[42,[28,[37,1],[[28,[37,1],[[30,1,[\"modlists\"]]],null]],null],null,[[[1,\"    \"],[10,0],[14,0,\"flex flex-col\"],[14,1,\"modlists\"],[12],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"ul\"],[14,0,\"ml-4 text-xl\"],[12],[1,\"\\n            \"],[8,[39,2],[[16,\"src\",[30,2,[\"imagelink\"]]],[16,\"alt\",[29,[\"A picture of \",[30,2,[\"modname\"]]]]]],null,null],[1,\"\\n            \"],[10,0],[12],[1,\"\\n                \"],[10,\"h3\"],[14,0,\"text-2xl italic\"],[12],[1,\"Mod Name: \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n                \"],[10,\"br\"],[12],[13],[1,\"\\n                \"],[10,\"h3\"],[12],[1,\"Release Year: \"],[1,[30,2,[\"releaseyear\"]]],[13],[1,\"\\n                \"],[10,\"br\"],[12],[13],[1,\"\\n                \"],[10,\"h3\"],[12],[1,\"Game: \"],[1,[30,2,[\"game\"]]],[13],[1,\"\\n                \"],[10,\"br\"],[12],[13],[1,\"\\n                \"],[10,3],[14,0,\"underline hover:text-gray-500 space-y-4\"],[15,6,[29,[[30,2,[\"link\"]]]]],[12],[1,\"Download \"],[1,[30,2,[\"modname\"]]],[13],[1,\"\\n            \"],[13],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,0],[14,0,\"pb-9\"],[12],[13],[1,\"\\n    \"],[13],[1,\"\\n      \\n\"]],[2]],null]],[\"@model\",\"modlist\"],false,[\"each\",\"-track-array\",\"imagehandler\"]]",
+    "id": "+s3enNQY",
+    "block": "[[[10,\"h1\"],[14,0,\"text-4xl ml-5 pb-7 italic\"],[12],[1,\"My Mods\"],[13],[1,\"\\n\\n\"],[8,[39,0],null,[[\"@model\"],[[30,1]]],null]],[\"@model\"],false,[\"modlist\"]]",
     "moduleName": "shaun-site/templates/modlist.hbs",
     "isStrictMode": false
   });
@@ -1087,7 +1058,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("shaun-site/app")["default"].create({"name":"shaun-site","version":"0.0.0+d4ddbbe1"});
+            require("shaun-site/app")["default"].create({"name":"shaun-site","version":"0.0.0+508efa8b"});
           }
         
 //# sourceMappingURL=shaun-site.map
