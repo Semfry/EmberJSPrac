@@ -83,6 +83,18 @@
   });
   0; //eaimeta@70e063a35619d71f0,"@glimmer/component/-private/ember-component-manager"eaimeta@70e063a35619d71f
 });
+;define("shaun-site/components/ember-chart", ["exports", "ember-cli-chart/components/ember-chart"], function (_exports, _emberChart) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-chart/components/ember-chart"eaimeta@70e063a35619d71f
+
+  var _default = _emberChart.default;
+  _exports.default = _default;
+});
 ;define("shaun-site/components/favgame", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
   "use strict";
 
@@ -95,18 +107,20 @@
   const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
   /*
     {{#each @model.favgames as |favgame|}}
-  <div id="favgames">
-      <br>
-      <li>Game Name: {{favgame.gamename}}</li>
-      <br>
-      <li>Release year: {{favgame.startyear}}</li>
-  </div>
-        
+      <div class="flex flex-col" id="favgames">
+          <br>
+          <ul class="ml-4 text-xl border border-gray-900">
+              <h3>Game Name: {{favgame.gamename}}</h3>
+              <h3>Release year: {{favgame.startyear}}</h3>
+          </ul>
+          <div class="pb-9"></div>
+      </div>
+  
   {{/each}}
   */
   {
-    "id": "kpZERXdp",
-    "block": "[[[42,[28,[37,1],[[28,[37,1],[[30,1,[\"favgames\"]]],null]],null],null,[[[10,0],[14,1,\"favgames\"],[12],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"li\"],[12],[1,\"Game Name: \"],[1,[30,2,[\"gamename\"]]],[13],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"li\"],[12],[1,\"Release year: \"],[1,[30,2,[\"startyear\"]]],[13],[1,\"\\n\"],[13],[1,\"\\n      \\n\"]],[2]],null]],[\"@model\",\"favgame\"],false,[\"each\",\"-track-array\"]]",
+    "id": "7aafIoQ5",
+    "block": "[[[42,[28,[37,1],[[28,[37,1],[[30,1,[\"favgames\"]]],null]],null],null,[[[1,\"    \"],[10,0],[14,0,\"flex flex-col\"],[14,1,\"favgames\"],[12],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"ul\"],[14,0,\"ml-4 text-xl border border-gray-900\"],[12],[1,\"\\n            \"],[10,\"h3\"],[12],[1,\"Game Name: \"],[1,[30,2,[\"gamename\"]]],[13],[1,\"\\n            \"],[10,\"h3\"],[12],[1,\"Release year: \"],[1,[30,2,[\"startyear\"]]],[13],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,0],[14,0,\"pb-9\"],[12],[13],[1,\"\\n    \"],[13],[1,\"\\n\\n\"]],[2]],null]],[\"@model\",\"favgame\"],false,[\"each\",\"-track-array\"]]",
     "moduleName": "shaun-site/components/favgame.hbs",
     "isStrictMode": false
   });
@@ -135,10 +149,18 @@
       <br>
       <img class="border-2 border-red-500" src="assets/images/graph3.png" alt="Total Billable and Non-Billable Hours of Users" width="1024" height="1024">
   </div>
+  
+  {{!-- template-lint-disable no-curly-component-invocation --}}
+  {{ember-chart 
+  type='line'
+  data=@chartData
+  width=50 
+  height=50
+  }}
   */
   {
-    "id": "ALFjY7zy",
-    "block": "[[[10,\"br\"],[12],[13],[1,\"\\n\"],[10,0],[14,0,\"flex flex-col gap-4\"],[12],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"img\"],[14,0,\"border-2 border-red-500\"],[14,\"src\",\"assets/images/graph1.png\"],[14,\"alt\",\"Total Hours of Users by Code Type\"],[14,\"width\",\"1024\"],[14,\"height\",\"1024\"],[12],[13],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"img\"],[14,0,\"border-2 border-gray-900\"],[14,\"src\",\"assets/images/graph2.png\"],[14,\"alt\",\"Total Hours of Users\"],[14,\"width\",\"1024\"],[14,\"height\",\"1024\"],[12],[13],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"img\"],[14,0,\"border-2 border-red-500\"],[14,\"src\",\"assets/images/graph3.png\"],[14,\"alt\",\"Total Billable and Non-Billable Hours of Users\"],[14,\"width\",\"1024\"],[14,\"height\",\"1024\"],[12],[13],[1,\"\\n\"],[13]],[],false,[]]",
+    "id": "UlJKDbu0",
+    "block": "[[[10,\"br\"],[12],[13],[1,\"\\n\"],[10,0],[14,0,\"flex flex-col gap-4\"],[12],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"img\"],[14,0,\"border-2 border-red-500\"],[14,\"src\",\"assets/images/graph1.png\"],[14,\"alt\",\"Total Hours of Users by Code Type\"],[14,\"width\",\"1024\"],[14,\"height\",\"1024\"],[12],[13],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"img\"],[14,0,\"border-2 border-gray-900\"],[14,\"src\",\"assets/images/graph2.png\"],[14,\"alt\",\"Total Hours of Users\"],[14,\"width\",\"1024\"],[14,\"height\",\"1024\"],[12],[13],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"img\"],[14,0,\"border-2 border-red-500\"],[14,\"src\",\"assets/images/graph3.png\"],[14,\"alt\",\"Total Billable and Non-Billable Hours of Users\"],[14,\"width\",\"1024\"],[14,\"height\",\"1024\"],[12],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\"],[1,[28,[35,0],null,[[\"type\",\"data\",\"width\",\"height\"],[\"line\",[30,1],50,50]]]]],[\"@chartData\"],false,[\"ember-chart\"]]",
     "moduleName": "shaun-site/components/graphs.hbs",
     "isStrictMode": false
   });
@@ -260,17 +282,17 @@
       <ul class="flex flex-row">
         <li class="mr-6">
           <LinkTo @route="index" class="menu-index">
-            <h1 class="text-orange-500 hover:text-orange-700 text-3xl ml-5 font-bold">Main Page</h1>
+            <h1 class="text-green-500 hover:text-green-700 text-3xl ml-5 font-bold">Main Page</h1>
           </LinkTo>
         </li>
         <li class="mr-6">
           <LinkTo @route="favgame" class="menu-favgames">
-            <h1 class="text-orange-500 hover:text-orange-700 text-3xl ml-3 font-bold">Favourite Games</h1>
+            <h1 class="text-green-500 hover:text-green-700 text-3xl ml-3 font-bold">Favourite Games</h1>
           </LinkTo>
           </li>
           <li class="mr-6">
           <LinkTo @route="modlist" class="menu-modlists">
-            <h1 class="text-orange-500 hover:text-orange-700 text-3xl ml-3 font-bold">My Mods</h1>
+            <h1 class="text-green-500 hover:text-green-700 text-3xl ml-3 font-bold">My Mods</h1>
           </LinkTo>
           </li>
       </ul>
@@ -278,8 +300,8 @@
   </nav>
   */
   {
-    "id": "ddQtGEZq",
-    "block": "[[[10,\"nav\"],[14,0,\"fixed bg-gradient-to-r from-blue-500 to-blue-400 px-2 py-2 rounded-b-3xl\"],[12],[1,\"\\n  \"],[10,0],[12],[1,\"\\n    \"],[10,\"ul\"],[14,0,\"flex flex-row\"],[12],[1,\"\\n      \"],[10,\"li\"],[14,0,\"mr-6\"],[12],[1,\"\\n        \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n          \"],[10,\"h1\"],[14,0,\"text-orange-500 hover:text-orange-700 text-3xl ml-5 font-bold\"],[12],[1,\"Main Page\"],[13],[1,\"\\n        \"]],[]]]]],[1,\"\\n      \"],[13],[1,\"\\n      \"],[10,\"li\"],[14,0,\"mr-6\"],[12],[1,\"\\n        \"],[8,[39,0],[[24,0,\"menu-favgames\"]],[[\"@route\"],[\"favgame\"]],[[\"default\"],[[[[1,\"\\n          \"],[10,\"h1\"],[14,0,\"text-orange-500 hover:text-orange-700 text-3xl ml-3 font-bold\"],[12],[1,\"Favourite Games\"],[13],[1,\"\\n        \"]],[]]]]],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,\"li\"],[14,0,\"mr-6\"],[12],[1,\"\\n        \"],[8,[39,0],[[24,0,\"menu-modlists\"]],[[\"@route\"],[\"modlist\"]],[[\"default\"],[[[[1,\"\\n          \"],[10,\"h1\"],[14,0,\"text-orange-500 hover:text-orange-700 text-3xl ml-3 font-bold\"],[12],[1,\"My Mods\"],[13],[1,\"\\n        \"]],[]]]]],[1,\"\\n        \"],[13],[1,\"\\n    \"],[13],[1,\"\\n  \"],[13],[1,\"\\n\"],[13]],[],false,[\"link-to\"]]",
+    "id": "/92X6BKu",
+    "block": "[[[10,\"nav\"],[14,0,\"fixed bg-gradient-to-r from-blue-500 to-blue-400 px-2 py-2 rounded-b-3xl\"],[12],[1,\"\\n  \"],[10,0],[12],[1,\"\\n    \"],[10,\"ul\"],[14,0,\"flex flex-row\"],[12],[1,\"\\n      \"],[10,\"li\"],[14,0,\"mr-6\"],[12],[1,\"\\n        \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n          \"],[10,\"h1\"],[14,0,\"text-green-500 hover:text-green-700 text-3xl ml-5 font-bold\"],[12],[1,\"Main Page\"],[13],[1,\"\\n        \"]],[]]]]],[1,\"\\n      \"],[13],[1,\"\\n      \"],[10,\"li\"],[14,0,\"mr-6\"],[12],[1,\"\\n        \"],[8,[39,0],[[24,0,\"menu-favgames\"]],[[\"@route\"],[\"favgame\"]],[[\"default\"],[[[[1,\"\\n          \"],[10,\"h1\"],[14,0,\"text-green-500 hover:text-green-700 text-3xl ml-3 font-bold\"],[12],[1,\"Favourite Games\"],[13],[1,\"\\n        \"]],[]]]]],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,\"li\"],[14,0,\"mr-6\"],[12],[1,\"\\n        \"],[8,[39,0],[[24,0,\"menu-modlists\"]],[[\"@route\"],[\"modlist\"]],[[\"default\"],[[[[1,\"\\n          \"],[10,\"h1\"],[14,0,\"text-green-500 hover:text-green-700 text-3xl ml-3 font-bold\"],[12],[1,\"My Mods\"],[13],[1,\"\\n        \"]],[]]]]],[1,\"\\n        \"],[13],[1,\"\\n    \"],[13],[1,\"\\n  \"],[13],[1,\"\\n\"],[13]],[],false,[\"link-to\"]]",
     "moduleName": "shaun-site/components/navbar.hbs",
     "isStrictMode": false
   });
@@ -882,6 +904,8 @@
   /*
     <h1 class="text-4xl ml-5 pb-7 italic">My Favourite Games</h1>
   
+  {{!-- <Favgame @favgame={{@model}} /> --}}
+  
   {{#each @model.favgames as |favgame|}}
       <div class="flex flex-col" id="favgames">
           <br>
@@ -895,8 +919,8 @@
   {{/each}}
   */
   {
-    "id": "Bda6JPjA",
-    "block": "[[[10,\"h1\"],[14,0,\"text-4xl ml-5 pb-7 italic\"],[12],[1,\"My Favourite Games\"],[13],[1,\"\\n\\n\"],[42,[28,[37,1],[[28,[37,1],[[30,1,[\"favgames\"]]],null]],null],null,[[[1,\"    \"],[10,0],[14,0,\"flex flex-col\"],[14,1,\"favgames\"],[12],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"ul\"],[14,0,\"ml-4 text-xl border border-gray-900\"],[12],[1,\"\\n            \"],[10,\"h3\"],[12],[1,\"Game Name: \"],[1,[30,2,[\"gamename\"]]],[13],[1,\"\\n            \"],[10,\"h3\"],[12],[1,\"Release year: \"],[1,[30,2,[\"startyear\"]]],[13],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,0],[14,0,\"pb-9\"],[12],[13],[1,\"\\n    \"],[13],[1,\"\\n\\n\"]],[2]],null]],[\"@model\",\"favgame\"],false,[\"each\",\"-track-array\"]]",
+    "id": "9+EMmTZ/",
+    "block": "[[[10,\"h1\"],[14,0,\"text-4xl ml-5 pb-7 italic\"],[12],[1,\"My Favourite Games\"],[13],[1,\"\\n\\n\"],[1,\"\\n\"],[42,[28,[37,1],[[28,[37,1],[[30,1,[\"favgames\"]]],null]],null],null,[[[1,\"    \"],[10,0],[14,0,\"flex flex-col\"],[14,1,\"favgames\"],[12],[1,\"\\n        \"],[10,\"br\"],[12],[13],[1,\"\\n        \"],[10,\"ul\"],[14,0,\"ml-4 text-xl border border-gray-900\"],[12],[1,\"\\n            \"],[10,\"h3\"],[12],[1,\"Game Name: \"],[1,[30,2,[\"gamename\"]]],[13],[1,\"\\n            \"],[10,\"h3\"],[12],[1,\"Release year: \"],[1,[30,2,[\"startyear\"]]],[13],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,0],[14,0,\"pb-9\"],[12],[13],[1,\"\\n    \"],[13],[1,\"\\n\\n\"]],[2]],null]],[\"@model\",\"favgame\"],false,[\"each\",\"-track-array\"]]",
     "moduleName": "shaun-site/templates/favgame.hbs",
     "isStrictMode": false
   });
@@ -920,6 +944,14 @@
   
   <Graphs />
   
+  {{!-- template-lint-disable no-curly-component-invocation --}}
+  {{!-- template-lint-disable no-implicit-this --}}
+  {{!-- {{ember-chart 
+  type='line' 
+  data=[12, 19, 3, 5, 2, 3] 
+  width=200 
+  height=200
+  }} --}}
   
   */
   {
@@ -1055,7 +1087,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("shaun-site/app")["default"].create({"name":"shaun-site","version":"0.0.0+0ce44577"});
+            require("shaun-site/app")["default"].create({"name":"shaun-site","version":"0.0.0+d4ddbbe1"});
           }
         
 //# sourceMappingURL=shaun-site.map

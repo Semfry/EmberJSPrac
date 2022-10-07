@@ -7,3 +7,11 @@
     <br>
     <img class="border-2 border-red-500" src="assets/images/graph3.png" alt="Total Billable and Non-Billable Hours of Users" width="1024" height="1024">
 </div>
+
+{{!-- template-lint-disable no-curly-component-invocation --}}
+{{ember-chart 
+type='line'
+data=@chartData
+width=50 
+height=50
+}}
